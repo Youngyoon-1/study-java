@@ -49,4 +49,13 @@ public class OperatorTest {
         if(operator.symbol.equals("/"))
             assertThat(operator.op.calc(1,2)).isEqualTo(0);
     }
+
+    @DisplayName("문자와 Operator 맵핑 테스트")
+    @Test
+    void of(){
+        assertThat(Operator.of("+")).isEqualTo(Operator.PLUS);
+        assertThat(Operator.of("-")).isEqualTo(Operator.MINUS);
+        assertThat(Operator.of("/")).isEqualTo(Operator.DIVIDE);
+        assertThat(Operator.of("*")).isEqualTo(Operator.MULTIPLY);
+    }
 }

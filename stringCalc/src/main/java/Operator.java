@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public enum Operator{
     PLUS("+",(a,b)->a+b),
     MINUS("-",(a,b)->a-b),
@@ -10,6 +12,13 @@ public enum Operator{
     Operator(String symbol, Calculable op){
         this.symbol = symbol;
         this.op = op;
+    }
+
+    public static Operator of(String symbol){
+        return Arrays.stream(values())
+                .filter(op -> op.symbol.equals(symbol))
+                .findFirst()
+                .get();
     }
 
     @FunctionalInterface
