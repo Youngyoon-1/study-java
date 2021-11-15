@@ -1,13 +1,20 @@
-public class Operator implements Calculable{
+public enum Operator{
+    PLUS("+",(a,b)->a+b),
+    MINUS("-",(a,b)->a-b),
+    MULTIPLY("*",(a,b)->a*b),
+    DIVIDE("/",(a,b)->a/b);
 
     String symbol;
+    Calculable op;
 
-    public Operator(String symbol){
+    Operator(String symbol, Calculable op){
         this.symbol = symbol;
+        this.op = op;
     }
 
-    @Override
-    public int calc(int a, int b) {
-        return 0;
+    @FunctionalInterface
+    interface Calculable{
+        public int calc(int a, int b);
     }
+
 }
