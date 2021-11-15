@@ -15,7 +15,7 @@ public class StringCalc {
         ValidationUtil.checkFirstIdx(str);
         ValidationUtil.checkLastIdx(str);
         ValidationUtil.checkOp("[\\+|\\*|/|-]",str);
-        List<String> nos = CalcUtil.removeOp("[\\+|\\*|/|-]",str);
+        List<String> nos = CalcUtil.removeOps("[\\+|\\*|/|-]",str);
         List<String> ops = CalcUtil.removeNos(str);
         result = Integer.parseInt(nos.get(0));
         for(int i = 1; i < nos.size(); i++){

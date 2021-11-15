@@ -1,11 +1,11 @@
 ValidationUtil.java
  ValidationUtil
-Operator.java
- Operator
- Operator$Calculable
 StringCalc.java
  StringCalc
 Application.java
  Application
 CalcUtil.java
  CalcUtil
+Operator.java
+ Operator
+ Operator$Calculable

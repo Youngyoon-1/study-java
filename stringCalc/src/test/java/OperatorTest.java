@@ -40,17 +40,17 @@ public class OperatorTest {
         if(operator == Operator.DIVIDE)
             assertThat(operator.op.calc(10,2)).isEqualTo(5);
 
-        if(operator.symbol.equals("+"))
-            assertThat(operator.op.calc(1,2)).isEqualTo(3);
-        if(operator.symbol.equals("-"))
-            assertThat(operator.op.calc(1,2)).isEqualTo(-1);
-        if(operator.symbol.equals("*"))
-            assertThat(operator.op.calc(1,2)).isEqualTo(2);
-        if(operator.symbol.equals("/"))
-            assertThat(operator.op.calc(4,2)).isEqualTo(2);
+//        if(operator.symbol.equals("+"))
+//            assertThat(operator.op.calc(1,2)).isEqualTo(3);
+//        if(operator.symbol.equals("-"))
+//            assertThat(operator.op.calc(1,2)).isEqualTo(-1);
+//        if(operator.symbol.equals("*"))
+//            assertThat(operator.op.calc(1,2)).isEqualTo(2);
+//        if(operator.symbol.equals("/"))
+//            assertThat(operator.op.calc(4,2)).isEqualTo(2);
     }
 
-    @DisplayName("문자와 Operator 맵핑 테스트")
+    @DisplayName("문자와 Operator맵핑 메소드 테스트")
     @Test
     void of(){
         assertThat(Operator.of("+")).isEqualTo(Operator.PLUS);

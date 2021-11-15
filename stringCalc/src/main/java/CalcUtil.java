@@ -7,7 +7,7 @@ public class CalcUtil {
 
     private CalcUtil() throws InstantiationException { throw new InstantiationException("CalcUtil객체를 생성할 수 없습니다.");}
 
-    public static List<String> removeOp(String regex, String s) {
+    public static List<String> removeOps(String regex, String s) {
         return Arrays.asList(s.split(regex));
     }
 
