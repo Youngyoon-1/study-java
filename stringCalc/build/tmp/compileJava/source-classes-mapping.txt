@@ -3,9 +3,9 @@ ValidationUtil.java
 Operator.java
  Operator
  Operator$Calculable
-CalcUtil.java
- CalcUtil
-Application.java
- Application
 StringCalc.java
  StringCalc
+Application.java
+ Application
+CalcUtil.java
+ CalcUtil
