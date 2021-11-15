@@ -27,4 +27,9 @@ public class CalcUtilTest {
 
     }
 
+    @DisplayName("공백제거 테스트")
+    @Test
+    void removeSpace(){
+        assertThat(CalcUtil.removeSpace(" 1 1 1+   2")).isEqualTo("111+2");
+    }
 }

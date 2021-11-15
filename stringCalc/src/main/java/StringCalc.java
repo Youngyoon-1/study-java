@@ -14,7 +14,7 @@ public class StringCalc {
 
     public int calc(String str){
         int result = 0;
-        str = str.replaceAll(" ","");   //공백제거
+        str = CalcUtil.removeSpace(str);
         ValidationUtil.checkFirstIdx(str);
         ValidationUtil.checkLastIdx(str);
         ValidationUtil.checkOp("[\\+|\\*|/|-]",str);

@@ -27,4 +27,8 @@ public class CalcUtil {
     public static void output(int result){
         System.out.println("결과값: " + result);
     }
+
+    public static String removeSpace(String s) {
+        return s.replaceAll(" ","");
+    }
 }
