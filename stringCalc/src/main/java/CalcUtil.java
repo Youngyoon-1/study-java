@@ -15,4 +15,5 @@ public class CalcUtil {
                 .filter(op->!op.equals(""))
                 .collect(Collectors.toList());
     }
+
 }

@@ -38,7 +38,7 @@ public class OperatorTest {
         if(operator == Operator.MULTIPLY)
             assertThat(operator.op.calc(1,2)).isEqualTo(2);
         if(operator == Operator.DIVIDE)
-            assertThat(operator.op.calc(1,2)).isEqualTo(0);
+            assertThat(operator.op.calc(10,2)).isEqualTo(5);
 
         if(operator.symbol.equals("+"))
             assertThat(operator.op.calc(1,2)).isEqualTo(3);
@@ -47,7 +47,7 @@ public class OperatorTest {
         if(operator.symbol.equals("*"))
             assertThat(operator.op.calc(1,2)).isEqualTo(2);
         if(operator.symbol.equals("/"))
-            assertThat(operator.op.calc(1,2)).isEqualTo(0);
+            assertThat(operator.op.calc(4,2)).isEqualTo(2);
     }
 
     @DisplayName("문자와 Operator 맵핑 테스트")

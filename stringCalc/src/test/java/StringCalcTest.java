@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertSame;
@@ -24,4 +26,10 @@ public class StringCalcTest {
         assertThat(calc).isEqualTo(StringCalc.getInstance());
     }
 
+    @DisplayName("계산기능 테스트")
+    @ParameterizedTest
+    @CsvSource(value={"1+2-3/2*2:0","100+100-100*5/2:250","10-10+1000/2*5:2500"},delimiter=':')
+    void calc(String s, int expected){
+        assertThat(calc.calc(s)).isEqualTo(expected);
+    }
 }

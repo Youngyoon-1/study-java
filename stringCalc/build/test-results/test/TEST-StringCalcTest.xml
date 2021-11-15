@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringCalcTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-15T08:49:29" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.082">
+<testsuite name="StringCalcTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-15T10:36:47" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.11">
   <properties/>
-  <testcase name="싱글톤패턴 테스트" classname="StringCalcTest" time="0.082"/>
+  <testcase name="[1] 1+2-3/2*2, 0" classname="StringCalcTest" time="0.092"/>
+  <testcase name="[2] 100+100-100*5/2, 250" classname="StringCalcTest" time="0.003"/>
+  <testcase name="[3] 10-10+1000/2*5, 2500" classname="StringCalcTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
