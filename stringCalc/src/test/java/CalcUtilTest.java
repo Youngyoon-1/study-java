@@ -24,7 +24,6 @@ public class CalcUtilTest {
         assertThat(CalcUtil.removeNos("1+1")).isEqualTo(Arrays.asList(new String[]{"+"}));
         assertThat(CalcUtil.removeNos("1-1+1")).isEqualTo(Arrays.asList(new String[]{"-","+"}));
         assertThat(CalcUtil.removeNos("1+1-1/1*1")).isEqualTo(Arrays.asList(new String[]{"+","-","/","*"}));
-
     }
 
     @DisplayName("공백제거 테스트")
@@ -32,4 +31,5 @@ public class CalcUtilTest {
     void removeSpace(){
         assertThat(CalcUtil.removeSpace(" 1 1 1+   2")).isEqualTo("111+2");
     }
+
 }
