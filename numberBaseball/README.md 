@@ -1,0 +1,26 @@
+To do list
+*랜덤값 생성(테스트x)
+    Class NumberUtil 만들기
+        private static final List<Integer>nosRepo =  new LinkedList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9)); 숫자저장소 만들기
+
+        static List<Integer> makeNos() 구현하기
+            List<Integer> candidate = nosRepo.clone();
+            List<Integer> randomNos = new ArrayList<Integer>();
+            while(randomNos.size() < 3){
+                int idx = (int)(Math.random * candidate.size())
+                randomNos.add(candidate.remove(idx));
+            }
+            return randomNos;
+
+
+        //단위테스트를 위해서 오버로딩했음
+        static List<Integer> makeNos(int[] idxs)
+            List<Integer> candidate = nosRepo.clone();
+            List<Integer> randomNos = new ArrayList<Integer>();
+            for(int i = 0; randomNos.size() < 3; i++){
+                randomNos.add(candidate.remove(idxs[i]));
+            }
+            return randomNos;
+        }
+
+
