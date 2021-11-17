@@ -32,4 +32,9 @@ public class ValidationUtil {
             throw new IllegalArgumentException("연산자 다음에는 숫자를 입력해주세요.");
 
     }
+
+    public static void checkDivideByZero(String s) {
+        if(s.contains("/0"))
+            throw new IllegalArgumentException("0으로 나눌수 없습니다.");
+    }
 }

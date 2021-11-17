@@ -65,4 +65,13 @@ public class ValidationUtilTest {
             ValidationUtil.checkDuplicatedOp(s);
         }).withMessageMatching("연산자 다음에는 숫자를 입력해주세요.");
     }
+
+    @DisplayName("나누기 뒤에 0이 나오는 경우 IllegalArgumentException 발생")
+    @ParameterizedTest
+    @ValueSource(strings={"1+1/0,2*3/0"})
+    void checkDivideByZero(String s){
+        assertThatIllegalArgumentException().isThrownBy(() -> {
+            ValidationUtil.checkDivideByZero(s);
+        }).withMessageMatching("0으로 나눌수 없습니다.");
+    }
 }
