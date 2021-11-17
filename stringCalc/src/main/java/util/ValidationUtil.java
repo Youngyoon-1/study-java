@@ -25,7 +25,6 @@ public class ValidationUtil {
             throw new IllegalArgumentException("연산자가 올바르지 않습니다.");
     }
 
-
     public static void checkDuplicatedOp(String s) {
         String[] ops = s.split("[0-9]");
         if(Arrays.stream(ops).anyMatch(op -> op.length() > 1))

@@ -14,10 +14,6 @@ public class StringCalc {
 
     public int calc(String str){
         int result = 0;
-        str = CalcUtil.removeSpace(str);
-        ValidationUtil.checkFirstIdx(str);
-        ValidationUtil.checkLastIdx(str);
-        ValidationUtil.checkOp("[\\+|\\*|/|-]",str);
         List<String> nos = CalcUtil.removeOps("[\\+|\\*|/|-]",str);
         List<String> ops = CalcUtil.removeNos(str);
         result = Integer.parseInt(nos.get(0));
@@ -26,5 +22,4 @@ public class StringCalc {
         }
         return result;
     }
-
 }
