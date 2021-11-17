@@ -1,8 +1,11 @@
 package util;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class ValidationUtil {
 
-    private ValidationUtil() throws InstantiationException { throw new InstantiationException("ValidationUtil");}
+    private ValidationUtil() throws InstantiationException { throw new InstantiationException("ValidationUtil객체는 생성할 수 없습니다.");}
 
     public static void checkFirstIdx(String s) {
         if(!(s.charAt(0) >= '0' && s.charAt(0) <='9'))
@@ -20,5 +23,13 @@ public class ValidationUtil {
         s = s.replaceAll(regex,"");
         if(!s.equals(""))
             throw new IllegalArgumentException("연산자가 올바르지 않습니다.");
+    }
+
+
+    public static void checkDuplicatedOp(String s) {
+        String[] ops = s.split("[0-9]");
+        if(Arrays.stream(ops).anyMatch(op -> op.length() > 1))
+            throw new IllegalArgumentException("연산자 다음에는 숫자를 입력해주세요.");
+
     }
 }

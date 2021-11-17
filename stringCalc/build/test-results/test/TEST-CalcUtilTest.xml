@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CalcUtilTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-11-15T20:17:11" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.1">
-  <properties/>
-  <testcase name="입력값중 숫자만 뽑아서 배열생성" classname="CalcUtilTest" time="0.088"/>
-  <testcase name="공백제거 테스트" classname="CalcUtilTest" time="0.003"/>
-  <testcase name="입력값중 연산자만 뽑아서 배열생성" classname="CalcUtilTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

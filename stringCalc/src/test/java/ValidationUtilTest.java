@@ -56,4 +56,13 @@ public class ValidationUtilTest {
             ValidationUtil.checkOp("[\\+|\\*|/|-]",s);
         }).withMessageMatching("연산자가 올바르지 않습니다.");
     }
+
+    @DisplayName("입력값에 연산자가 연속으로 들어있는경우 예외 발생 테스트")
+    @ParameterizedTest
+    @ValueSource(strings={"1++,2+2//"})
+    void checkDuplicatedOp(String s){
+        assertThatIllegalArgumentException().isThrownBy(()->{
+            ValidationUtil.checkDuplicatedOp(s);
+        }).withMessageMatching("연산자 다음에는 숫자를 입력해주세요.");
+    }
 }

@@ -1,8 +1,8 @@
-ValidationUtilTest.java
- ValidationUtilTest
 OperatorTest.java
  OperatorTest
-StringCalcTest.java
- StringCalcTest
+ValidationUtilTest.java
+ ValidationUtilTest
 CalcUtilTest.java
  CalcUtilTest
+StringCalcTest.java
+ StringCalcTest
