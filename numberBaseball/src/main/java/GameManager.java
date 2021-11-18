@@ -34,12 +34,12 @@ public class GameManager {
         }
     }
 
-//    public void init(Scanner sc){
-//        boolean gameToken = true;
-//        while(gameToken){
-//            play(sc, NumberUtil.makeNos());
-//            ResultView.print();
-//            gameToken = checkNo(InputView.receiveNo(sc));
-//        }
-//    }
+    public void init(Scanner sc){
+        boolean gameToken = true;
+        while(gameToken){
+            play(sc, NumberUtil.makeNos());
+            ResultView.print();
+            gameToken = checkNo(InputView.receiveNo(sc));
+        }
+    }
 }
