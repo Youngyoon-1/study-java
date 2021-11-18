@@ -18,4 +18,13 @@ public class ScoreTest {
 
         assertThat(Score.BALL.formula.calc(actual, expected)).isEqualTo(result);
     }
+
+    @DisplayName("STRIKE 계산 테스트")
+    @ParameterizedTest
+    @CsvSource(value={"123:123:3","123:923:2","123:145:1","123:456:0"},delimiter = ':')
+    void strike(String s1, String s2, int result){
+        List<Integer> actual = Arrays.stream(s1.split("")).mapToInt(Integer::parseInt).boxed().collect(Collectors.toList());
+        List<Integer> expected = Arrays.stream(s2.split("")).mapToInt(Integer::parseInt).boxed().collect(Collectors.toList());
+        assertThat(Score.STRIKE.formula.calc(actual,expected)).isEqualTo(result);
+    }
 }
