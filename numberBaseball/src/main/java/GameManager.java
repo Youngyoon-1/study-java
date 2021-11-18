@@ -13,4 +13,11 @@ public class GameManager {
     public boolean check3Strike(List<String> result) {
         return result.stream().anyMatch(score -> score.contains("3스트라이크"));
     }
+
+    public boolean checkNo(String s) {
+        if(s.equals("1")){
+            return true;
+        }
+        return false;
+    }
 }
