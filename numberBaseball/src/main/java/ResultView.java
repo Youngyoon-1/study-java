@@ -1,6 +1,11 @@
 import java.util.List;
 
 public class ResultView {
+
+    private ResultView() throws InstantiationException {
+        throw new InstantiationException("ResultView는 객체화 할 수 없습니다.");
+    }
+
     static void print(List<String> result){
         result.stream().forEach(score -> System.out.printf("%s ",score));
     }

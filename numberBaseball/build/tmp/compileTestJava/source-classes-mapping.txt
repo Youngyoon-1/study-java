@@ -2,7 +2,7 @@ NumberUtilTest.java
  NumberUtilTest
 ScoreTest.java
  ScoreTest
-FormatUtilTest.java
- FormatUtilTest
 GameManagerTest.java
  GameManagerTest
+FormatUtilTest.java
+ FormatUtilTest

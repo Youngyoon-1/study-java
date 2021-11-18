@@ -8,6 +8,10 @@ import java.util.List;
 public class NumberUtil {
     private static final List<Integer> NOS_REPO = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9));
 
+    private NumberUtil() throws InstantiationException {
+        throw new InstantiationException("NumberUtil은 객체화 할 수 없습니다.");
+    }
+
     public static List<Integer> makeNos(){
         //값을 끝에서부터 순차적으로 삭제하는것이 아니기 때문에 LinkedList를 사용했다.
         List<Integer> candidate = new LinkedList<Integer>();

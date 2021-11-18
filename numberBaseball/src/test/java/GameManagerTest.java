@@ -27,7 +27,7 @@ public class GameManagerTest {
         assertThat(gameManager.check3Strike(Arrays.asList(s))).isEqualTo(bool);
     }
 
-    @DisplayName("값이 1이면 true, 2면 false 반환 테스트")
+    @DisplayName("값이 1이면 true 아니면 false 반환 테스트")
     @ParameterizedTest
     @CsvSource(value={"1:true","2:false"},delimiter=':')
     void checkNo(String s, boolean bool){
