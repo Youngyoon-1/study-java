@@ -1,15 +1,15 @@
-util/NumberUtil.java
- util.NumberUtil
-ResultView.java
- ResultView
 Score.java
  Score
  Score$Formula
-Application.java
- Application
-InputView.java
- InputView
-GameManager.java
- GameManager
+util/NumberUtil.java
+ util.NumberUtil
 util/FormatUtil.java
  util.FormatUtil
+InputView.java
+ InputView
+Application.java
+ Application
+GameManager.java
+ GameManager
+ResultView.java
+ ResultView
