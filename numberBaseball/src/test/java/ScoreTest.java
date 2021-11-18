@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Arrays;
 import java.util.List;
@@ -26,6 +27,7 @@ public class ScoreTest {
     void strike(String s1, String s2, int result){
         List<Integer> actual = Arrays.stream(s1.split("")).mapToInt(Integer::parseInt).boxed().collect(Collectors.toList());
         List<Integer> expected = Arrays.stream(s2.split("")).mapToInt(Integer::parseInt).boxed().collect(Collectors.toList());
+
         assertThat(Score.STRIKE.formula.calc(actual,expected)).isEqualTo(result);
     }
 
@@ -37,5 +39,17 @@ public class ScoreTest {
         List<Integer> expected = Arrays.stream(s2.split("")).mapToInt(Integer::parseInt).boxed().collect(Collectors.toList());
 
         assertThat(Score.NOTHING.formula.calc(actual, expected)).isEqualTo(result);
+    }
+
+    @DisplayName("점수계산 테스트")
+    @ParameterizedTest
+    @CsvSource(value={"123:123:3스트라이크","123:132:2볼,1스트라이크","123:167:1스트라이크","123:256:1볼","123:456:낫싱","123:789:낫싱"},delimiter=':')
+    void calcScore(String s1, String s2, String s3){
+        List<Integer> actual = Arrays.stream(s1.split("")).mapToInt(Integer::parseInt).boxed().collect(Collectors.toList());
+        List<Integer> expected = Arrays.stream(s2.split("")).mapToInt(Integer::parseInt).boxed().collect(Collectors.toList());
+        List<String> result = Arrays.stream(s3.split(",")).collect(Collectors.toList());
+
+        assertThat(Score.of(expected,actual)).isEqualTo(result);
+
     }
 }
