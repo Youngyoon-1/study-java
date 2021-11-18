@@ -1,5 +1,4 @@
 To do list
-*랜덤값 생성(테스트x)
 
 Class GameManager{
 
@@ -81,7 +80,3 @@ Class GameManager{
         }
 
     }
-
-
-
-
