@@ -2,3 +2,5 @@ NumberUtilTest.java
  NumberUtilTest
 ScoreTest.java
  ScoreTest
+FormatUtilTest.java
+ FormatUtilTest
