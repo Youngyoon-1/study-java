@@ -1,5 +1,29 @@
 To do list
 *랜덤값 생성(테스트x)
+
+Class GameManager{
+
+     void init(){
+         boolean gameToken = true
+         while(gameToken){
+             play();
+             재시작멘트출력;
+             입력값 받기;
+             gameToken = checkInput(입력값);
+         }
+     }
+
+     void play(){
+         boolean is3Strike = false;
+         List<Integer> actual = 랜덤값생성;
+         while(!is3Strike){
+             List<Integer> expected = 입력값받기;
+             List<String> result = Score.of(expected).compareTo(actual).getResult();
+             비교결과출력하기;
+             is3Strike = 비교결과가 3스트라이크인지 체크하기;
+         }
+     }
+}
     Class NumberUtil 만들기
         private static final List<Integer>nosRepo =  new LinkedList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9)); 숫자저장소 만들기
 
@@ -12,7 +36,6 @@ To do list
             }
             return randomNos;
 
-
         //단위테스트를 위해서 오버로딩했음
         static List<Integer> makeNos(int[] idxs)
             List<Integer> candidate = nosRepo.clone();
@@ -22,5 +45,43 @@ To do list
             }
             return randomNos;
         }
+
+    enum Score{
+
+        BALL(볼,계산식),
+        STRIKE(스트라이크,계산식),
+        NOTHING(낫싱,계산식);
+
+        List<Integer> expected;
+        String name;
+        Formula formula;
+
+        Score(String name, Formula formula){
+            this.name = name;
+            this.formula = formula;
+        }
+
+        Score of(List<Integer> expected){
+            this.expected = expected;
+        }
+
+        Stream CompareTo(List<Integer> actual){
+            return Score.values.stream()
+                        .filter(score -> score.formula(actual, this.expected) != 0)
+                        .map(score -> score.formula(actual, this.expected)+score.name);
+        }
+
+        List<String> getResult(Stream stream){
+            return stream.collect(Collectors.toList());
+        }
+
+        @functionalInterface
+        interface Formula{
+             int formula(List<Integer> actual, List<Integer> expected);
+        }
+
+    }
+
+
 
 

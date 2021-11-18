@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ScoreTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-11-18T11:39:34" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.104">
+  <properties/>
+  <testcase name="[1] 123, 123, 0" classname="ScoreTest" time="0.07"/>
+  <testcase name="[2] 123, 316, 2" classname="ScoreTest" time="0.004"/>
+  <testcase name="[3] 456, 765, 2" classname="ScoreTest" time="0.005"/>
+  <testcase name="[4] 456, 789, 0" classname="ScoreTest" time="0.001"/>
+  <testcase name="[5] 123, 345, 1" classname="ScoreTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
