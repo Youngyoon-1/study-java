@@ -4,3 +4,5 @@ ScoreTest.java
  ScoreTest
 FormatUtilTest.java
  FormatUtilTest
+GameManagerTest.java
+ GameManagerTest
