@@ -19,6 +19,7 @@ public class NumberUtil {
         while(nos.size() < LENGTH){
             nos.add((int) (Math.random() * MAX_NO + MIN_NO));
         }
+        //reduce 스트림의 요소를 하나씩 줄여가며 누적연산 수행
         return Integer.parseInt(nos.stream().map(Object::toString).reduce((a,b)->a+b).get());
     }
 }
