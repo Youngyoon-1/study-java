@@ -1,8 +1,8 @@
 NumberUtilTest.java
  NumberUtilTest
-ScoreTest.java
- ScoreTest
-GameManagerTest.java
- GameManagerTest
 FormatUtilTest.java
  FormatUtilTest
+GameManagerTest.java
+ GameManagerTest
+ScoreTest.java
+ ScoreTest

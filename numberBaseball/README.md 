@@ -1,82 +1,45 @@
 To do list
 
-Class GameManager{
+1.랜덤숫자 3개 생성하기
+    반환값 Balls(멤버필드:List<Ball>)
 
-     void init(){
-         boolean gameToken = true
-         while(gameToken){
-             play();
-             재시작멘트출력;
-             입력값 받기;
-             gameToken = checkInput(입력값);
-         }
-     }
+    1~9의 숫자로 이뤄져 있어야 한다.
+    중복된 숫자가 없어야한다.
 
-     void play(){
-         boolean is3Strike = false;
-         List<Integer> actual = 랜덤값생성;
-         while(!is3Strike){
-             List<Integer> expected = 입력값받기;
-             List<String> result = Score.of(expected).compareTo(actual).getResult();
-             비교결과출력하기;
-             is3Strike = 비교결과가 3스트라이크인지 체크하기;
-         }
-     }
-}
-    Class NumberUtil 만들기
-        private static final List<Integer>nosRepo =  new LinkedList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9)); 숫자저장소 만들기
+2."숫자를 입력해 주세요 : "출력하기
 
-        static List<Integer> makeNos() 구현하기
-            List<Integer> candidate = nosRepo.clone();
-            List<Integer> randomNos = new ArrayList<Integer>();
-            while(randomNos.size() < 3){
-                int idx = (int)(Math.random * candidate.size())
-                randomNos.add(candidate.remove(idx));
-            }
-            return randomNos;
+3.입력값 받기
+    입력값 제한사항
+    1~9의 숫자로 이뤄져 있어야 한다.
+    숫자만 존재해야 한다.
+    중복된 숫자가 없어야한다.
+    길이는 3이여야한다.
 
-        //단위테스트를 위해서 오버로딩했음
-        static List<Integer> makeNos(int[] idxs)
-            List<Integer> candidate = nosRepo.clone();
-            List<Integer> randomNos = new ArrayList<Integer>();
-            for(int i = 0; randomNos.size() < 3; i++){
-                randomNos.add(candidate.remove(idxs[i]));
-            }
-            return randomNos;
-        }
+4.정답과 입력값 비교하기
+    Balls 클래스 compareTo()메서드로 구현
+    매개변수 Balls
+    반환값 Score(멤버필드:List<Result>)
 
-    enum Score{
+5.비교한 결과 출력하기
+    Score 클래스 print()메서드로 구현
+    반환값 this
 
-        BALL(볼,계산식),
-        STRIKE(스트라이크,계산식),
-        NOTHING(낫싱,계산식);
+6.정답인지 확인하기
+    Score 클래스 is3Strike()메서드로 구현
+    true 일때
+    7."3개의 숫자를 모두 맞히셨습니다! 게임 종료",
+      "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요." 출력하기
 
-        List<Integer> expected;
-        String name;
-        Formula formula;
+    8.입력값 받기
+        Switch 클래스 구현
+        입력값 제한사항
+        숫자만 입력가능
+        1,2 둘중 하나만 입력가능
+        길이는 1
 
-        Score(String name, Formula formula){
-            this.name = name;
-            this.formula = formula;
-        }
+        Switch 클래스 isOn() 메서드 구현
+        입력값이 1이면 1번 순서로 이동
+        입력값이 2이면 종료
 
-        Score of(List<Integer> expected){
-            this.expected = expected;
-        }
-
-        Stream CompareTo(List<Integer> actual){
-            return Score.values.stream()
-                        .filter(score -> score.formula(actual, this.expected) != 0)
-                        .map(score -> score.formula(actual, this.expected)+score.name);
-        }
-
-        List<String> getResult(Stream stream){
-            return stream.collect(Collectors.toList());
-        }
-
-        @functionalInterface
-        interface Formula{
-             int formula(List<Integer> actual, List<Integer> expected);
-        }
-
-    }
+    false 일때
+    2번 순서로 이동

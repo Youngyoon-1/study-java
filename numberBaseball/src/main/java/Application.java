@@ -1,9 +1,9 @@
-import java.util.Scanner;
+import util.NumberUtil;
 
 public class Application {
-    private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        GameManager gm = GameManager.getInstance();
-        gm.init(sc);
+        for(int i = 0; i < 1000; i++){
+            System.out.println(NumberUtil.makeNos());
+        }
     }
 }

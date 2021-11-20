@@ -1,37 +1,24 @@
 package util;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class NumberUtil {
-    private static final List<Integer> NOS_REPO = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9));
 
-    private NumberUtil() throws InstantiationException {
-        throw new InstantiationException("NumberUtil은 객체화 할 수 없습니다.");
-    }
+    public static final int LENGTH = 3;
+    public static final int MAX_NO = 9;
+    public static final int MIN_NO = 1;
 
-    public static List<Integer> makeNos(){
-        //값을 끝에서부터 순차적으로 삭제하는것이 아니기 때문에 LinkedList를 사용했다.
-        List<Integer> candidate = new LinkedList<Integer>();
-        candidate.addAll(NOS_REPO);
-        List<Integer> randomNos = new ArrayList<Integer>();
-        while(randomNos.size() < 3){
-            int idx = (int)(Math.random() * candidate.size());
-            randomNos.add(candidate.remove(idx));
+    //set 자료구조를 사용해서 중복값 제외시킴
+    //LinkedHashSet을 사용해서 입력된 순서대로 데이터를 관리할 수 있음 그래서 반복시 입력된 순서로 반복된다.
+    //HashSet은 순서보장이 안됨.
+    public static int makeNos(){
+        Set<Integer> nos = new LinkedHashSet<Integer>();
+        while(nos.size() < LENGTH){
+            nos.add((int) (Math.random() * MAX_NO + MIN_NO));
         }
-        return randomNos;
-    }
-
-    //단위 테스트를 위해서 오버로딩했다.
-    public static List<Integer> makeNos(int[] nos){
-        List<Integer> candidate = new LinkedList<Integer>();
-        List<Integer> makeNosByUser = new ArrayList<Integer>();
-        candidate.addAll(NOS_REPO);
-        for(int i = 0; makeNosByUser.size() < 3; i++){
-            makeNosByUser.add(candidate.remove(nos[i]));
-        }
-        return makeNosByUser;
+        return Integer.parseInt(nos.stream().map(Object::toString).reduce((a,b)->a+b).get());
     }
 }
