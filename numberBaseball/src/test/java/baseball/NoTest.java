@@ -12,11 +12,13 @@ public class NoTest {
     void strikeTest(){
         assertThat(new No(0,1).compareTo(new No(0,1))).isEqualTo(Score.STRIKE);
     }
+
     @DisplayName("볼 테스트")
     @Test
     void ballTest(){
         assertThat(new No(0,1).compareTo(new No(1,1))).isEqualTo(Score.BALL);
     }
+
     @DisplayName("낫싱 테스트")
     @Test
     void nothingTest(){

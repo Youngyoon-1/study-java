@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="baseball.NosTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-20T22:43:24" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.088">
+  <properties/>
+  <testcase name="낫싱 테스트" classname="baseball.NosTest" time="0.088"/>
+  <system-out><![CDATA[낫싱
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
