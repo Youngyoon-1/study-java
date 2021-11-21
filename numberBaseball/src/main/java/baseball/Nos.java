@@ -1,5 +1,8 @@
 package baseball;
 
+import util.FormatUtil;
+
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -10,8 +13,10 @@ public class Nos {
 
     private final List<No> nos;
 
-    public Nos(List<Integer> no) {
-        this.nos = IntStream.range(ZERO, LENGTH).mapToObj(i -> new No(i,no.get(i))).collect(Collectors.toList());
+    public Nos(int no) {
+        checkValid(no);
+        List<Integer> list = FormatUtil.convertList(no);
+        this.nos = IntStream.range(ZERO, LENGTH).mapToObj(i -> new No(i,list.get(i))).collect(Collectors.toList());
     }
 
     public Scores compareTo(Nos expected) {
@@ -34,4 +39,30 @@ public class Nos {
                         return Score.NOTHING;
                     }).collect(Collectors.toList()));
     }
+
+    private void checkValid(int no){
+        checkLength(no);
+        checkDuplicate(no);
+        checkIsZero(no);
+    }
+
+    private void checkIsZero(int no) {
+        if(Integer.toString(no).contains("0")){
+            throw new IllegalArgumentException("0을 제외한 1 부터 9까지의 숫자를 입력하세요.");
+        }
+    }
+
+    private void checkDuplicate(int no) {
+        if(Arrays.stream(Integer.toString(no).split("")).distinct().count() != LENGTH){
+            throw new IllegalArgumentException("중복된 숫자를 입력하셨습니다. 중복없이 입력하세요.");
+        }
+
+    }
+
+    private void checkLength(int no) {
+        if(Integer.toString(no).length() != LENGTH){
+            throw new IllegalArgumentException("숫자 세자리를 입력해주세요.");
+        }
+    }
+
 }

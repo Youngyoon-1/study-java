@@ -3,6 +3,7 @@ package baseball;
 import java.util.List;
 
 public class Scores {
+    public static final int LENGTH = 3;
     private final List<Score> scores;
 
     public Scores(List<Score> scores) {
@@ -34,5 +35,7 @@ public class Scores {
         return (int) scores.stream().filter(score -> score.isStrike()).count();
     }
 
-
+    public boolean is3Strike(){
+        return getStrikeCount() == LENGTH;
+    }
 }
