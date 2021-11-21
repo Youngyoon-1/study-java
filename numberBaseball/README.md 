@@ -19,8 +19,7 @@ To do list
     반환값 Score(멤버필드:List<Result>)
 
 4.비교한 결과 출력하기
-    Score 클래스 print()메서드로 구현
-    반환값 this
+  
 
 5.정답인지 확인하기
     Score 클래스 is3Strike()메서드로 구현

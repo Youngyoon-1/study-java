@@ -1,8 +1,6 @@
 package baseball;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Scores {
     private final List<Score> scores;
@@ -16,14 +14,15 @@ public class Scores {
         StringBuilder sb = new StringBuilder();
 
         if(scores.contains(Score.STRIKE)){
-            sb.append(getStrikeCount() + "스트라이크");
+            sb.append(getStrikeCount() + "스트라이크 ");
         }
         if(scores.contains(Score.BALL)){
-            sb.append(getBallCount() + "볼");
+            sb.append(getBallCount() + "볼 ");
         }
         if(!scores.contains(Score.STRIKE) && !scores.contains(Score.BALL)){
             sb.append("낫싱");
         }
+
         return sb.toString();
     }
 

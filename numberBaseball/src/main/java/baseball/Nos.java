@@ -1,6 +1,5 @@
 package baseball;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -19,8 +18,12 @@ public class Nos {
         return expected.matchNos(nos);
     }
 
+    private List<Score> compareTo(No inputNo){
+        return nos.stream().map(no -> no.compareTo(inputNo)).collect(Collectors.toList());
+    }
+
     private Scores matchNos(List<No> nos) {
-        return new Scores(this.nos.stream().map(no1 -> nos.stream().map(no2 -> no1.compareTo(no2)).collect(Collectors.toList()))
+        return new Scores(nos.stream().map(no-> compareTo(no))
                     .map(li -> {
                         if(li.contains(Score.STRIKE)){
                             return Score.STRIKE;

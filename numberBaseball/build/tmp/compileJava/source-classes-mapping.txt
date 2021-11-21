@@ -1,13 +1,15 @@
 util/NumberUtil.java
  util.NumberUtil
+baseball/No.java
+ baseball.No
+view/OutputView.java
+ view.OutputView
+baseball/Score.java
+ baseball.Score
 view/InputView.java
  view.InputView
 Application.java
  Application
-baseball/No.java
- baseball.No
-baseball/Score.java
- baseball.Score
 baseball/Scores.java
  baseball.Scores
 baseball/Nos.java
