@@ -1,14 +1,13 @@
 package racingCar;
 
 public class Car {
-    public static final int ONE = 1;
     public static final int LIMITER = 4;
     public static final String POSITION_STRING = "-";
     public static final String SEPARATOR = " : ";
     public static final int LENGTH_LIMITER = 5;
     public static final int ZERO = 0;
 
-    private int position = ONE;
+    private int position = ZERO;
     private final String name;
 
     public Car(String name) {

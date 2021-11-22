@@ -41,7 +41,7 @@ public class Cars {
         StringBuilder sb = new StringBuilder();
         for(int i = ZERO; i < count; i++){
             cars.stream().forEach(car -> car.move(NumberUtil.makeNo()));
-            sb.append(report());
+            sb.append(report() + LINE_BREAK);
         }
         return sb.toString();
     }
