@@ -3,6 +3,7 @@ package racingCar;
 public class Car {
     public static final int ZERO = 0;
     public static final int LIMITER = 4;
+    public static final String POSITION_STRING = "-";
 
     private int position = ZERO;
     
@@ -18,5 +19,13 @@ public class Car {
     
     public boolean isPosition(int i) {
         return i == position;
+    }
+
+    public String report() {
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < position; i++){
+            sb.append(POSITION_STRING);
+        }
+        return sb.toString();
     }
 }
