@@ -6,7 +6,13 @@ public class Car {
     public static final String POSITION_STRING = "-";
 
     private int position = ZERO;
-    
+
+    public Car(String s) {
+        if(s.length() > 5){
+            throw new IllegalArgumentException("자동차 이름은 5글자를 초과할 수 없습니다.");
+        }
+    }
+
     public void move(int no) {
         if(canMove(no)){
             position++;
