@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="stringAddCalc.StringAddCalcTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-11-22T05:21:33" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.451">
+<testsuite name="stringAddCalc.StringAddCalcTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2021-11-22T07:21:26" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.149">
   <properties/>
-  <testcase name="빈 문자열, null일 경우 0을 반환" classname="stringAddCalc.StringAddCalcTest" time="0.217"/>
-  <testcase name="[1] 0" classname="stringAddCalc.StringAddCalcTest" time="0.032"/>
-  <testcase name="[2] 9" classname="stringAddCalc.StringAddCalcTest" time="0.005"/>
+  <testcase name="[1] //;&#10;1;2;3" classname="stringAddCalc.StringAddCalcTest" time="0.059"/>
+  <testcase name="[2] ///&#10;1/2/3" classname="stringAddCalc.StringAddCalcTest" time="0.002"/>
+  <testcase name="[3] //&amp;&#10;1&amp;2&amp;3" classname="stringAddCalc.StringAddCalcTest" time="0.002"/>
+  <testcase name="빈 문자열, null일 경우 0을 반환" classname="stringAddCalc.StringAddCalcTest" time="0.006"/>
+  <testcase name="[1] 0" classname="stringAddCalc.StringAddCalcTest" time="0.001"/>
+  <testcase name="[2] 9" classname="stringAddCalc.StringAddCalcTest" time="0.002"/>
   <testcase name="[3] 99" classname="stringAddCalc.StringAddCalcTest" time="0.001"/>
-  <testcase name="[1] 1,2,3, 6" classname="stringAddCalc.StringAddCalcTest" time="0.015"/>
-  <testcase name="[2] 1:2:3, 6" classname="stringAddCalc.StringAddCalcTest" time="0.002"/>
-  <testcase name="[3] 1:2,3, 6" classname="stringAddCalc.StringAddCalcTest" time="0.001"/>
-  <testcase name="[4] 1,2:3, 6" classname="stringAddCalc.StringAddCalcTest" time="0.003"/>
+  <testcase name="[1] 1,2,3, 6" classname="stringAddCalc.StringAddCalcTest" time="0.004"/>
+  <testcase name="[2] 1:2:3, 6" classname="stringAddCalc.StringAddCalcTest" time="0.0"/>
+  <testcase name="[3] 1:2,3, 6" classname="stringAddCalc.StringAddCalcTest" time="0.003"/>
+  <testcase name="[4] 1,2:3, 6" classname="stringAddCalc.StringAddCalcTest" time="0.001"/>
+  <testcase name="음수값이 들어간 경우 RuntimeExceptin 발생" classname="stringAddCalc.StringAddCalcTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

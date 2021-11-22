@@ -1,2 +1,4 @@
 stringAddCalc/StringAddCalc.java
  stringAddCalc.StringAddCalc
+stringAddCalc/InputVal.java
+ stringAddCalc.InputVal
