@@ -1,6 +1,7 @@
 package baseball;
 
 import util.FormatUtil;
+import util.LogUtil;
 
 import java.util.Arrays;
 import java.util.List;
@@ -41,9 +42,13 @@ public class Nos {
     }
 
     private void checkValid(int no){
-        checkLength(no);
-        checkDuplicate(no);
-        checkIsZero(no);
+        try{
+            checkLength(no);
+            checkDuplicate(no);
+            checkIsZero(no);
+        }catch(IllegalArgumentException e){
+           e.printStackTrace();
+        }
     }
 
     private void checkIsZero(int no) {
