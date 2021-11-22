@@ -1,12 +1,14 @@
 package racingCar;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Cars {
     public static final String SEPARATOR  = ",";
     public static final String LINE_BREAK = "\n";
+    public static final int ONE = 1;
     private final List<Car> cars;
 
     public Cars(String names){
@@ -19,8 +21,17 @@ public class Cars {
         return sb.toString();
     }
 
-//    public void play(int count){
-//        for(int i = 0; i < count; i++){
-//        }
-//    }
+    public String getWinnerName(){
+        StringBuilder sb = new StringBuilder();
+        int maxPosition = getMaxPosition();
+        cars.stream().filter(car -> car.isMaxPosition(maxPosition)).forEach(car -> sb.append(car.getName() + SEPARATOR));
+        sb.deleteCharAt(sb.length()- ONE);
+        return sb.toString();
+    }
+
+    private int getMaxPosition() {
+        Comparator<Car> comparatorByPosition = Comparator.comparingInt(Car::getPosition);
+        return cars.stream().max(comparatorByPosition).get().getPosition();
+    }
+
 }

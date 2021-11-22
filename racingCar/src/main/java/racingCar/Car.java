@@ -6,6 +6,7 @@ public class Car {
     public static final String POSITION_STRING = "-";
     public static final String SEPARATOR = " : ";
     public static final int LENGTH_LIMITER = 5;
+    public static final int ZERO = 0;
 
     private int position = ONE;
     private final String name;
@@ -35,16 +36,28 @@ public class Car {
         return no >= LIMITER;
     }
     
-    public boolean isPosition(int i) {
-        return i == position;
+    public boolean isPosition(int no) {
+        return no == position;
     }
 
     public String report() {
         StringBuilder sb = new StringBuilder();
         sb.append(name + SEPARATOR);
-        for(int i = 0; i < position; i++){
+        for(int i = ZERO; i < position; i++){
             sb.append(POSITION_STRING);
         }
         return sb.toString();
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public boolean isMaxPosition(int position) {
+        return this.position == position;
+    }
+
+    public String getName() {
+        return name;
     }
 }
