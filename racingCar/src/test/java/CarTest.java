@@ -20,20 +20,20 @@ public class CarTest {
 
     @DisplayName("4이상일경우 전진 미만일경우 정지 테스트")
     @ParameterizedTest
-    @CsvSource(value={"0:0","3:0","4:1","5:1"},delimiter = ':')
+    @CsvSource(value={"0:1","3:1","4:2","5:2"},delimiter = ':')
     void moveCar(int no, int position){
         car.move(no);
         assertThat(car.isPosition(position)).isTrue();
     }
 
-    @DisplayName("위치값 문자열 반환 테스트")
+    @DisplayName("자동차 정보 문자열 반환 테스트")
     @Test
     void report(){
-        assertThat(car.report()).isEqualTo("");
+        assertThat(car.report()).isEqualTo("myCar : -");
         car.move(4);
-        assertThat(car.report()).isEqualTo("-");
+        assertThat(car.report()).isEqualTo("myCar : --");
         car.move(4);
-        assertThat(car.report()).isEqualTo("--");
+        assertThat(car.report()).isEqualTo("myCar : ---");
     }
 
     @DisplayName("이름 5글자 초과시 예외발생 테스트")

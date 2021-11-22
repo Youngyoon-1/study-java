@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CarTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-22T08:28:25" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.09">
+<testsuite name="CarTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-11-22T08:39:58" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.27">
   <properties/>
-  <testcase name="이름 5글자 초과시 예외발생 테스트" classname="CarTest" time="0.09"/>
+  <testcase name="자동차 정보 문자열 반환 테스트" classname="CarTest" time="0.112"/>
+  <testcase name="이름 5글자 초과시 예외발생 테스트" classname="CarTest" time="0.007"/>
+  <testcase name="[1] 0, 1" classname="CarTest" time="0.042"/>
+  <testcase name="[2] 3, 1" classname="CarTest" time="0.011"/>
+  <testcase name="[3] 4, 2" classname="CarTest" time="0.002"/>
+  <testcase name="[4] 5, 2" classname="CarTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
