@@ -5,6 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class InputVal {
+
     public static final String EMPTY = "";
     public static final String REGEX = ",|:";
     public static final String ZERO_STRING = "0";
@@ -52,4 +53,5 @@ public class InputVal {
         return Arrays.stream(value.split(REGEX)).mapToInt(Integer::parseInt)
                 .filter(no -> checkMinus(no)).sum();
     }
+
 }
