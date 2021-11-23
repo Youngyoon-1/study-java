@@ -1,6 +1,7 @@
 package racingCar.domain;
 
 public class Car implements Comparable<Car> {
+
     public static final int LIMITER = 4;
     public static final String SEPARATOR = " : ";
 
