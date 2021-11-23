@@ -28,14 +28,6 @@ public class Position implements Comparable<Position> {
         return sb.toString();
     }
 
-    public boolean overThan(Position maxPosition) {
-        int result = this.compareTo(maxPosition);
-        if(result > ZERO){
-            return true;
-        }
-        return false;
-    }
-
     public int compareTo(int no) {
         if(this.position > no){
             return -1;

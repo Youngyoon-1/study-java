@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="racingCar.domain.CarsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-23T09:22:58" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.104">
-  <properties/>
-  <testcase name="자동차 정보 문자열로 반환 테스트" classname="racingCar.domain.CarsTest" time="0.093"/>
-  <testcase name="우승자 자동차 이름 반환 테스트" classname="racingCar.domain.CarsTest" time="0.005"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

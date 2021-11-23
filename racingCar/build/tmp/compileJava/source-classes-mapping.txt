@@ -10,5 +10,7 @@ racingCar/domain/Car.java
  racingCar.domain.Car
 racingCar/utils/NumberUtil.java
  racingCar.utils.NumberUtil
+racingCar/domain/Name.java
+ racingCar.domain.Name
 racingCar/racingCarMain.java
  racingCar.racingCarMain

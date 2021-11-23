@@ -3,7 +3,6 @@ package racingCar.domain;
 import racingCar.utils.NumberUtil;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,7 +26,8 @@ public class Cars {
 
     public String getWinnerName(){
         StringBuilder sb = new StringBuilder();
-        cars.stream().filter(car -> car.isMaxPosition(getMaxPosition())).forEach(car -> sb.append(car.getName() + SEPARATOR));
+        cars.stream().filter(car -> car.isMaxPosition(getMaxPosition()))
+                .forEach(car -> sb.append(car.getName().report() + SEPARATOR));
         sb.deleteCharAt(sb.length()- ONE);
         return sb.toString();
     }
