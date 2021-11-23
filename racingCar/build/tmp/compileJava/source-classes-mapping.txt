@@ -4,13 +4,13 @@ racingCar/view/InputView.java
  racingCar.view.InputView
 racingCar/domain/Position.java
  racingCar.domain.Position
-racingCar/view/OutputView.java
- racingCar.view.OutputView
+racingCar/domain/Name.java
+ racingCar.domain.Name
 racingCar/domain/Car.java
  racingCar.domain.Car
 racingCar/utils/NumberUtil.java
  racingCar.utils.NumberUtil
-racingCar/domain/Name.java
- racingCar.domain.Name
+racingCar/view/OutputView.java
+ racingCar.view.OutputView
 racingCar/racingCarMain.java
  racingCar.racingCarMain
