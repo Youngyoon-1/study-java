@@ -1,4 +1,4 @@
-racingCar/CarsTest.java
- racingCar.CarsTest
-racingCar/CarTest.java
- racingCar.CarTest
+racingCar/domain/CarsTest.java
+ racingCar.domain.CarsTest
+racingCar/domain/CarTest.java
+ racingCar.domain.CarTest

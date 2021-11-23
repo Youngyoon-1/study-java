@@ -2,6 +2,8 @@ racingCar/domain/Cars.java
  racingCar.domain.Cars
 racingCar/view/InputView.java
  racingCar.view.InputView
+racingCar/domain/Position.java
+ racingCar.domain.Position
 racingCar/view/OutputView.java
  racingCar.view.OutputView
 racingCar/domain/Car.java

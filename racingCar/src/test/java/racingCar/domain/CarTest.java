@@ -24,7 +24,7 @@ public class CarTest {
     @CsvSource(value={"0:0","3:0","4:1","5:1"},delimiter = ':')
     void moveCar(int no, int position){
         car.move(no);
-        assertThat(car.isPosition(position)).isTrue();
+        assertThat(car.getPosition()).isEqualTo(new Position((position)));
     }
 
     @DisplayName("자동차 정보 문자열 반환 테스트")

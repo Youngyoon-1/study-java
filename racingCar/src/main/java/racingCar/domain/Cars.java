@@ -12,6 +12,7 @@ public class Cars {
     public static final String LINE_BREAK = "\n";
     public static final int ONE = 1;
     public static final int ZERO = 0;
+
     private final List<Car> cars;
 
     public Cars(String names){
@@ -26,15 +27,38 @@ public class Cars {
 
     public String getWinnerName(){
         StringBuilder sb = new StringBuilder();
-        int maxPosition = getMaxPosition();
+        Position maxPosition = getMaxPosition();
         cars.stream().filter(car -> car.isMaxPosition(maxPosition)).forEach(car -> sb.append(car.getName() + SEPARATOR));
         sb.deleteCharAt(sb.length()- ONE);
         return sb.toString();
     }
 
-    private int getMaxPosition() {
-        Comparator<Car> comparatorByPosition = Comparator.comparingInt(Car::getPosition);
-        return cars.stream().max(comparatorByPosition).get().getPosition();
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    //스트림으로 리펙토링하기
+    private Position getMaxPosition() {
+        Position maxPosition = new Position(0);
+        for(Car car: cars){
+            if(car.positionOverThan(maxPosition)){
+                maxPosition = car.getPosition();
+            }
+        }
+        return maxPosition;
     }
 
     public String play(int count){
