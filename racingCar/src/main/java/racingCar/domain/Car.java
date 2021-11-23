@@ -1,6 +1,6 @@
 package racingCar.domain;
 
-public class Car {
+public class Car implements Comparable<Car> {
     public static final int LIMITER = 4;
     public static final String SEPARATOR = " : ";
 
@@ -33,11 +33,20 @@ public class Car {
         return this.position.equals(position);
     }
 
-    public Name getName() {
-        return name;
+    public String getName() {
+        return name.report();
     }
 
     public Position getPosition() {
         return position;
+    }
+
+    @Override
+    public int compareTo(Car car) {
+        return car.compareTo(position);
+    }
+    //역전
+    private int compareTo(Position position) {
+        return position.compareTo(this.position);
     }
 }

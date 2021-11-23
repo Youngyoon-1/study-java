@@ -27,13 +27,13 @@ public class Cars {
     public String getWinnerName(){
         StringBuilder sb = new StringBuilder();
         cars.stream().filter(car -> car.isMaxPosition(getMaxPosition()))
-                .forEach(car -> sb.append(car.getName().report() + SEPARATOR));
+                .forEach(car -> sb.append(car.getName() + SEPARATOR));
         sb.deleteCharAt(sb.length()- ONE);
         return sb.toString();
     }
 
     private Position getMaxPosition() {
-        return cars.stream().map(Car::getPosition).max(Position::compareTo).get();
+        return cars.stream().max(Car::compareTo).get().getPosition();
     }
 
     public String play(int count){

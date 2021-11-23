@@ -3,6 +3,7 @@ package racingCar.domain;
 import java.util.Objects;
 
 public class Position implements Comparable<Position> {
+
     public static final String POSITION_STRING = "-";
     public static final int ZERO = 0;
 
@@ -28,6 +29,12 @@ public class Position implements Comparable<Position> {
         return sb.toString();
     }
 
+    @Override
+    public int compareTo(Position position) {
+        //역전시킴
+        return position.compareTo(this.position);
+    }
+
     public int compareTo(int no) {
         if(this.position > no){
             return -1;
@@ -36,12 +43,6 @@ public class Position implements Comparable<Position> {
             return 1;
         }
         return 0;
-    }
-
-    @Override
-    public int compareTo(Position position) {
-        //역전
-        return position.compareTo(this.position);
     }
 
     @Override

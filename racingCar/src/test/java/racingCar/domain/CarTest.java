@@ -14,9 +14,7 @@ public class CarTest {
     Car car;
 
     @BeforeEach
-    void setUp(){
-        car = new Car("myCar");
-    }
+    void setUp(){ car = new Car("myCar"); }
 
     @DisplayName("4이상일경우 전진 미만일경우 정지 테스트")
     @ParameterizedTest
