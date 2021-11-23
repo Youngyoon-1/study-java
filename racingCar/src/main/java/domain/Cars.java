@@ -1,6 +1,6 @@
-package racingCar;
+package domain;
 
-import util.NumberUtil;
+import utils.NumberUtil;
 
 import java.util.Arrays;
 import java.util.Comparator;

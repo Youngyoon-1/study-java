@@ -1,12 +1,12 @@
-util/NumberUtil.java
- util.NumberUtil
-racingCar/Car.java
- racingCar.Car
+utils/NumberUtil.java
+ utils.NumberUtil
+domain/Car.java
+ domain.Car
 view/OutputView.java
  view.OutputView
 view/InputView.java
  view.InputView
-Application.java
- Application
-racingCar/Cars.java
- racingCar.Cars
+domain/Cars.java
+ domain.Cars
+racingCarMain.java
+ racingCarMain
