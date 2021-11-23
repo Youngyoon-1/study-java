@@ -1,8 +1,8 @@
-import domain.Cars;
-import view.InputView;
-import view.OutputView;
+package racingCar;
 
-import java.util.Scanner;
+import racingCar.domain.Cars;
+import racingCar.view.InputView;
+import racingCar.view.OutputView;
 
 public class racingCarMain {
     public static void main(String[] args) {

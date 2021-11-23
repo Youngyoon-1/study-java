@@ -1,4 +1,4 @@
-package utils;
+package racingCar.utils;
 
 public class NumberUtil {
 

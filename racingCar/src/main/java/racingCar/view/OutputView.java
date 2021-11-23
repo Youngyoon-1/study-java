@@ -1,6 +1,4 @@
-package view;
-
-import java.util.Scanner;
+package racingCar.view;
 
 public class OutputView {
     public static void printReport(String report){

@@ -1,4 +1,4 @@
-package domain;
+package racingCar.domain;
 
 public class Car {
     public static final int LIMITER = 4;
