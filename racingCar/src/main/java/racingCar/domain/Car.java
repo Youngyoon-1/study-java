@@ -1,53 +1,34 @@
 package racingCar.domain;
 
-public class Car implements Comparable<Car> {
-
-    public static final int LIMITER = 4;
-    public static final String SEPARATOR = " : ";
-
-    private final Position position;
+public class Car implements Comparable<Car>{
     private final Name name;
+    private Position position;
 
-    public Car(String name) {
-        this.name = new Name(name);
-        this.position = new Position();
+    public Car(Name name) {
+        this.name = name;
+        position = new Position();
     }
 
-    public void move(int no) {
-        if(canMove(no)){
+    public void move(Fuel fuel) {
+        if(fuel.isLeft()) {
             position.move();
         }
-    }
-
-    private boolean canMove(int no){
-        return no >= LIMITER;
-    }
-
-    public String report() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(name.report() + SEPARATOR);
-        sb.append(position.report());
-        return sb.toString();
-    }
-
-    public boolean isMaxPosition(Position position) {
-        return this.position.equals(position);
-    }
-
-    public String getName() {
-        return name.report();
     }
 
     public Position getPosition() {
         return position;
     }
 
+    public boolean isSamePosition(Position position) {
+        return this.position.equals(position);
+    }
+
+    public Name getName() {
+        return name;
+    }
+
     @Override
     public int compareTo(Car car) {
-        return car.compareTo(position);
-    }
-    //역전
-    private int compareTo(Position position) {
-        return position.compareTo(this.position);
+        return position.compareTo(car.getPosition());
     }
 }
