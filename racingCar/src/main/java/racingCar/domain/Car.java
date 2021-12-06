@@ -27,8 +27,18 @@ public class Car implements Comparable<Car>{
         return name;
     }
 
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+
     @Override
     public int compareTo(Car car) {
         return position.compareTo(car.getPosition());
+    }
+
+    public Car deepClone() {
+        Car newCar = new Car(new Name(name.toString()));
+        newCar.setPosition(new Position(position.get()));
+        return newCar;
     }
 }

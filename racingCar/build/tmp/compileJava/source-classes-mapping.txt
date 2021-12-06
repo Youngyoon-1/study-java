@@ -1,19 +1,19 @@
-view/WinnerView.java
- view.WinnerView
+racingCar/service/CarService.java
+ racingCar.service.CarService
 racingCar/domain/Position.java
  racingCar.domain.Position
 view/CountInputView.java
  view.CountInputView
 racingCar/domain/RandomFuel.java
  racingCar.domain.RandomFuel
-racingCar/domain/Fuel.java
- racingCar.domain.Fuel
+racingCar/controller/CarController.java
+ racingCar.controller.CarController
 racingCar/domain/Car.java
  racingCar.domain.Car
 racingCar/domain/Name.java
  racingCar.domain.Name
-Application.java
- Application
+racingCar/repository/CarRepository.java
+ racingCar.repository.CarRepository
 racingCar/domain/Cars.java
  racingCar.domain.Cars
 view/NamesInputView.java
@@ -28,9 +28,9 @@ Adapter.java
  Adapter
 racingCar/domain/Result.java
  racingCar.domain.Result
-racingCar/service/CarService.java
- racingCar.service.CarService
-racingCar/controller/CarController.java
- racingCar.controller.CarController
-racingCar/repository/CarRepository.java
- racingCar.repository.CarRepository
+Application.java
+ Application
+racingCar/domain/Fuel.java
+ racingCar.domain.Fuel
+view/WinnerView.java
+ view.WinnerView

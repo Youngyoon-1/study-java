@@ -22,4 +22,10 @@ public class Cars {
     public Stream<Car> getStream() {
         return cars.stream();
     }
+
+    public Cars deepClone() {
+        Cars newCars = new Cars();
+        cars.stream().forEach(car -> newCars.add(car.deepClone()));
+        return newCars;
+    }
 }

@@ -21,7 +21,7 @@ public class CarRepository {
     }
 
     public Cars getCars() {
-        return cars;
+        return cars.deepClone();
     }
 
     public Position findMaxPosition() {
@@ -34,3 +34,5 @@ public class CarRepository {
         return winner;
     }
 }
+
+

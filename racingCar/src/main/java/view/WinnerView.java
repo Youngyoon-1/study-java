@@ -8,8 +8,8 @@ public class WinnerView {
 
     public static void show(Cars cars) {
         StringBuilder stringBuilder = new StringBuilder();
-        cars.getStream().forEach(car -> stringBuilder.append(car.getName() + STRING));
-        stringBuilder.delete(stringBuilder.length() - INT, stringBuilder.length()-1);
-        System.out.println("최종우승자 : " + stringBuilder);
+        cars.getStream().forEach(car -> stringBuilder.append(car.getName() + " "));
+        String winnerNames = stringBuilder.toString().trim().replace(" ", ", ");
+        System.out.println("최종우승자 : " + winnerNames);
     }
 }
