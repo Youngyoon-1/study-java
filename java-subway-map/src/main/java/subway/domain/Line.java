@@ -23,22 +23,24 @@ public class Line {
         return stations;
     }
 
-    public boolean hasStation(String name) {
-        return stations.stream().filter(station -> station.equals(name)).findFirst().isPresent();
+    public void add(Station station) {
+        checkIsNewStation(station);
+        stations.add(station);
     }
 
-    public void add(String name) {
-        checkDuplication(name);
-        stations.add(new Station(name));
+    private void checkIsNewStation(Station station) {
+        if(stations.stream().anyMatch(originalStation -> originalStation.equals(station))) {
+            throw new IllegalArgumentException("[ERROR] 노선 안에 이미 존재하는 역입니다.");
+        }
     }
 
-    public void add(String stationName, int order) {
-        checkDuplication(stationName);
-        checkOrderNumber(order);
-        stations.add(order - 1, new Station(stationName));
+    public void add(Station station, int order) {
+        checkIsNewStation(station);
+        checkStationOrder(order);
+        stations.add(order - 1, station);
     }
 
-    public void checkOrderNumber(int order) {
+    public void checkStationOrder(int order) {
         if(isOverThanThresholdOrder(order)) {
             throw new IllegalArgumentException("[ERROR] 최대 순서는 존재하는 역의 갯수에 2를 더한 값을 넘 수 없습니다. ");
         }
@@ -48,17 +50,10 @@ public class Line {
         return order > stations.size() + THRESHOLD_COUNT;
     }
 
-    private void checkDuplication(String name) {
-        if(hasStation(name)) {
-            throw new IllegalArgumentException("[ERROR] 한 노선에 같은 역은 존재할 수 없습니다.");
-        }
-    }
-
-    public void delete(String stationName) {
+    public void delete(Station station) {
+        checkExistStation(station);
         checkStationsCount();
-        Station targetStation = stations.stream().filter(station -> station.getName().equals(stationName))
-            .findFirst().orElseThrow(() -> new IllegalArgumentException("[ERROR] 해당 노선에 존재하지 않는 역 입니다."));
-        stations.remove(targetStation);
+        stations.remove(station);
     }
 
     private void checkStationsCount() {
@@ -67,10 +62,14 @@ public class Line {
         }
     }
 
-    public void checkHasStation(String stationName) {
-        if(hasStation(stationName)) {
-            throw new IllegalArgumentException("[ERROR] 해당 노선에 존재하지 않는 역 입니다.");
-        }
+    public void checkExistStation(Station inputStation) {
+        stations.stream()
+            .filter(station -> station.equals(inputStation))
+            .findFirst().orElseThrow(() -> new IllegalArgumentException("[ERROR] 해당 노선에 존재하지 않는 역 입니다."));
+    }
+
+    public boolean hasStation(Station station) {
+        return stations.contains(station);
     }
 
     @Override

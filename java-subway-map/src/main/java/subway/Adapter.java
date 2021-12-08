@@ -1,19 +1,13 @@
 package subway;
 
-import subway.domain.SubwayController;
-import subway.mapper.IndexMapper;
+import subway.mapper.IndexPageMapper;
+import view.IndexView;
 
 public class Adapter {
-    private final SubwayController subwayController;
-
-    public Adapter() {
-        this.subwayController = SubwayController.getInstance();
-    }
-
     public void run() {
         while(true){
-            String request = subwayController.index();
-            IndexMapper.mapping(request);
+            String request = IndexView.print();
+            IndexPageMapper.map(request);
         }
     }
 }

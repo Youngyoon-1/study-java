@@ -4,11 +4,22 @@ import java.util.List;
 import java.util.Scanner;
 
 import subway.domain.Station;
+import utils.ValidationUtil;
 
 public class AdminStationView {
     public static final Scanner scanner = new Scanner(System.in);
 
     public static String printMain() {
+        try{
+            printMainContent();
+            return ValidationUtil.checkMainStationLinePage(scanner.nextLine().trim());
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return printMain();
+        }
+    }
+
+    private static void printMainContent() {
         System.out.println();
         System.out.println("## 역 관리 화면");
         System.out.println("1. 역 등록");
@@ -17,13 +28,17 @@ public class AdminStationView {
         System.out.println("B. 돌아가기");
         System.out.println();
         System.out.println("## 원하는 기능을 선택하세요.");
-        return scanner.nextLine();
     }
 
     public static String printPageAddStation() {
-        System.out.println();
-        System.out.println("## 등록할 역 이름을 입력하세요.");
-        return scanner.nextLine();
+        try {
+            System.out.println();
+            System.out.println("## 등록할 역 이름을 입력하세요.");
+            return ValidationUtil.checkStationLineName(scanner.nextLine().trim());
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return printPageAddStation();
+        }
     }
 
     public static void printResultPageAddStation() {
@@ -32,9 +47,14 @@ public class AdminStationView {
     }
 
     public static String printPageDeleteStation() {
-        System.out.println();
-        System.out.println("## 삭제할 역 이름을 입력하세요.");
-        return scanner.nextLine();
+        try {
+            System.out.println();
+            System.out.println("## 삭제할 역 이름을 입력하세요.");
+            return ValidationUtil.checkStationLineName(scanner.nextLine().trim());
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return printPageDeleteStation();
+        }
     }
 
     public static void printResultPageDeleteStation() {
