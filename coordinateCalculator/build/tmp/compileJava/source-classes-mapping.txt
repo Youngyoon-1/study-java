@@ -1,4 +1,10 @@
-coordinateCalculator/view/View.java
- coordinateCalculator.view.View
 coordinateCalculator/Application.java
  coordinateCalculator.Application
+coordinateCalculator/view/View.java
+ coordinateCalculator.view.View
+coordinateCalculator/domain/CoordinateCalculator.java
+ coordinateCalculator.domain.CoordinateCalculator
+coordinateCalculator/domain/Coordinates.java
+ coordinateCalculator.domain.Coordinates
+coordinateCalculator/domain/Coordinate.java
+ coordinateCalculator.domain.Coordinate
