@@ -4,11 +4,15 @@ import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class View {
-    public static String mainPage(Scanner scanner) {
+    public static String inputCoordinate(Scanner scanner) {
+        System.out.println("좌표를 입력하세요.");
+        return scanner.nextLine().replace(" ", "");
+    }
+
+    public static void mainPage(Scanner scanner) {
         int maxNumber = 24;
         printY(maxNumber);
         printX(maxNumber);
-        return scanner.nextLine().replace(" ", "");
     }
 
     private static void printX(int maxNumber) {
