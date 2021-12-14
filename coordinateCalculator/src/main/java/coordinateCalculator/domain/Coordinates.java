@@ -13,6 +13,10 @@ public class Coordinates {
             .collect(Collectors.toList());
     }
 
+    public List<Coordinate> get() {
+        return coordinates;
+    }
+
     public double getDistance() {
         Coordinate first = coordinates.get(0);
         Coordinate second = coordinates.get(1);

@@ -17,4 +17,8 @@ public class Coordinate {
     public Integer getY() {
         return y;
     }
+
+    public boolean isSame(int x, int y) {
+        return this.x == x && this.y == y;
+    }
 }

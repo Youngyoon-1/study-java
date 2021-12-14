@@ -1,5 +1,7 @@
 package coordinateCalculator.domain;
 
+import coordinateCalculator.view.View;
+
 public class CoordinateCalculator {
     private Coordinates coordinates;
 
@@ -7,7 +9,8 @@ public class CoordinateCalculator {
         this.coordinates = new Coordinates(coordinates);
     }
 
-    public double calcDistance() {
-        return coordinates.getDistance();
+    public void calcDistance() {
+        View.printCoordinates(coordinates);
+        View.printResult(coordinates.getDistance());
     }
 }

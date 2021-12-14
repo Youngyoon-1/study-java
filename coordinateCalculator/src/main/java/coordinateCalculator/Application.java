@@ -9,6 +9,6 @@ public class Application {
     public static void main(String[] args) {
         CoordinateCalculator d = new CoordinateCalculator();
         d.setCoordinates("(10,10)-(14,15)");
-        System.out.println(d.calcDistance());
+        d.calcDistance();
     }
 }
