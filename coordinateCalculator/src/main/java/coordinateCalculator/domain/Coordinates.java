@@ -4,10 +4,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import coordinateCalculator.utils.ValidationUtil;
+
 public class Coordinates {
     private List<Coordinate> coordinates;
 
     public Coordinates(String coordinates) {
+        ValidationUtil.checkCoordinates(coordinates);
         this.coordinates = Arrays.stream(coordinates.split("-"))
             .map(coordinate -> new Coordinate(coordinate))
             .collect(Collectors.toList());

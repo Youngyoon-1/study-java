@@ -13,6 +13,7 @@ public class View {
     }
 
     public static void printCoordinates(Coordinates coordinates) {
+        System.out.println();
         int maxNumber = 24;
         for (int y = 0; y <= maxNumber; y++) {
             if (y % 2 == 0 && y != maxNumber) {
