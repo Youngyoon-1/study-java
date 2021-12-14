@@ -25,12 +25,12 @@ public class CarRepository {
     }
 
     public Position findMaxPosition() {
-        return cars.getStream().max(Car::compareTo).get().getPosition();
+        return cars.getCars().max(Car::compareTo).get().getPosition();
     }
 
     public Cars findCarByPosition(Position position) {
         Cars winner = new Cars();
-        cars.getStream().filter(car -> car.isSamePosition(position)).forEach(winner::add);
+        cars.getCars().filter(car -> car.isSamePosition(position)).forEach(winner::add);
         return winner;
     }
 }

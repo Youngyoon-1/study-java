@@ -19,8 +19,8 @@ public class Cars {
         cars.stream().forEach(car -> car.move(fuel));
     }
 
-    public Stream<Car> getStream() {
-        return cars.stream();
+    public List<Car> getCars() {
+        return cars;
     }
 
     public Cars deepClone() {

@@ -2,7 +2,6 @@ package racingCar.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Result {
     private final List<Cars> result;
@@ -15,7 +14,7 @@ public class Result {
         result.add(cars);
     }
 
-    public Stream<Cars> getStream() {
-        return result.stream();
+    public List<Cars> getResult() {
+        return result;
     }
 }
