@@ -11,7 +11,7 @@ public class View {
         System.out.println("좌표를 입력하세요.");
         return scanner.nextLine().replace(" ", "");
     }
-    
+
     public static void printCoordinates(Coordinates coordinates) {
         int maxNumber = 24;
         for (int y = 0; y <= maxNumber; y++) {
@@ -54,6 +54,7 @@ public class View {
     }
 
     public static void printResult(double distance) {
-
+        System.out.println();
+        System.out.println("두 점 사이의 거리는 " + distance);
     }
 }
