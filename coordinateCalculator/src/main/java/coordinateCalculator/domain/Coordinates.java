@@ -27,4 +27,8 @@ public class Coordinates {
         int b = first.getY() - second.getY();
         return Math.sqrt((a * a) + (b * b));
     }
+
+    public boolean hasPoint(int x, int y) {
+        return coordinates.stream().anyMatch(coordinate -> coordinate.isSame(x, y));
+    }
 }

@@ -9,7 +9,7 @@ public class Coordinate {
     private final Integer y;
 
     public Coordinate(String coordinate) {
-        String[] coordinates = coordinate.replaceAll("[\\(\\)]", "").split(",");
+        String[] coordinates = coordinate.replaceAll("[()]", "").split(",");
         checkCoordinate(coordinates);
         x = Integer.valueOf(coordinates[0]);
         y = Integer.valueOf(coordinates[1]);

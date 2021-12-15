@@ -1,7 +1,6 @@
 package coordinateCalculator.view;
 
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 import coordinateCalculator.domain.Coordinate;
 import coordinateCalculator.domain.Coordinates;
@@ -12,49 +11,65 @@ public class View {
         return scanner.nextLine().replace(" ", "");
     }
 
-    public static void printCoordinates(Coordinates coordinates) {
-        System.out.println();
-        int maxNumber = 24;
-        for (int y = 0; y <= maxNumber; y++) {
-            if (y % 2 == 0 && y != maxNumber) {
-                System.out.printf("%2d|", maxNumber - y);
-            }
-            if (y % 2 != 0) {
-                System.out.print("  |");
-            }
-            if (y == maxNumber) {
-                System.out.print("  +");
-                IntStream.range(0, maxNumber).forEach(i -> {
-                    System.out.print("-");
-                    if (i != maxNumber - 1) {
-                        System.out.print("-");
-                    }
-                });
-            }
-            for (int x = 0; x <= maxNumber; x++) {
-                for (Coordinate coordinate : coordinates.get()) {
-                    if (coordinate.isSame(x, maxNumber - y)) {
-                        for (int i = 0; i < x; i++) {
-                            System.out.print(" ");
-                        }
-                        System.out.print("﹒");
-                    }
-                }
-            }
-            System.out.println();
+    public static void showResult(Coordinates coordinates) {
+        printEmptyLine();
+        showVerticalNumbersWith(coordinates);
+        printHorizontalAxis();
+        printHorizontalNumber();
+    }
+
+    private static void showVerticalNumbersWith(Coordinates coordinates) {
+        for (int y = Coordinate.MAXIMUM_NUMBER; y >= 1; y--) {
+            printAxisNumber(y);
+            printVerticalAxis();
+            printPoint(coordinates, y);
+            printEmptyLine();
         }
-        IntStream.rangeClosed(0, maxNumber).forEach(i -> {
-            if (i % 2 == 0) {
-                System.out.printf("%2d", i);
-            }
-            if (i % 2 != 0) {
-                System.out.print("  ");
-            }
-        });
+    }
+
+    private static void printHorizontalNumber() {
+        System.out.print("   0 ");
+        for (int x = 1; x <= Coordinate.MAXIMUM_NUMBER; x++) {
+            printAxisNumber(x);
+        }
+        printEmptyLine();
+    }
+
+    private static void printHorizontalAxis() {
+        System.out.print(String.format("%5s", "+"));
+        for (int x = 1; x <= Coordinate.MAXIMUM_NUMBER; x++) {
+            System.out.print("----");
+        }
+        printEmptyLine();
+    }
+
+    private static void printEmptyLine() {
         System.out.println();
     }
 
-    public static void printResult(double distance) {
+    private static void printPoint(Coordinates coordinates, int y) {
+        for (int x = 1; x <= Coordinate.MAXIMUM_NUMBER; x++) {
+            if (coordinates.hasPoint(x, y)) {
+                System.out.print(String.format("%4s", "."));
+                continue;
+            }
+            System.out.print("    ");
+        }
+    }
+
+    private static void printVerticalAxis() {
+        System.out.print("|");
+    }
+
+    private static void printAxisNumber(int index) {
+        if (index % 2 == 0) {
+            System.out.print(String.format("%4d", index));
+            return;
+        }
+        System.out.print("    ");
+    }
+
+    public static void printDistance(double distance) {
         System.out.println();
         System.out.println("두 점 사이의 거리는 " + distance);
     }

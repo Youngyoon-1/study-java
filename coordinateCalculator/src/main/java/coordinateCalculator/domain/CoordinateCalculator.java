@@ -10,7 +10,7 @@ public class CoordinateCalculator {
     }
 
     public void calcDistance() {
-        View.printCoordinates(coordinates);
-        View.printResult(coordinates.getDistance());
+        View.showResult(coordinates);
+        View.printDistance(coordinates.getDistance());
     }
 }

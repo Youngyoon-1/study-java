@@ -1,14 +1,14 @@
 coordinateCalculator/utils/ValidationUtil.java
  coordinateCalculator.utils.ValidationUtil
-coordinateCalculator/view/View.java
- coordinateCalculator.view.View
+coordinateCalculator/domain/Coordinate.java
+ coordinateCalculator.domain.Coordinate
+coordinateCalculator/Application.java
+ coordinateCalculator.Application
 coordinateCalculator/domain/Coordinates.java
  coordinateCalculator.domain.Coordinates
+coordinateCalculator/view/View.java
+ coordinateCalculator.view.View
 coordinateCalculator/domain/CoordinateCalculator.java
  coordinateCalculator.domain.CoordinateCalculator
 coordinateCalculator/Adapter.java
  coordinateCalculator.Adapter
-coordinateCalculator/Application.java
- coordinateCalculator.Application
-coordinateCalculator/domain/Coordinate.java
- coordinateCalculator.domain.Coordinate
