@@ -1,4 +1,4 @@
-coordinateCalculator/utils/ValidationUtil.java
- coordinateCalculator.utils.ValidationUtil
 coordinateCalculator/Application.java
  coordinateCalculator.Application
+coordinateCalculator/utils/ValidationUtil.java
+ coordinateCalculator.utils.ValidationUtil
