@@ -9,7 +9,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class ValidationUtilTest {
-
     @DisplayName("입력값이 형식에 맞지않을 경우 예외발생")
     @ParameterizedTest
     @ValueSource(strings = {"(1,2)+(1,2)", "(1,2 - 1,3)", "1 - 2", "(1,3),(1,5)"})
