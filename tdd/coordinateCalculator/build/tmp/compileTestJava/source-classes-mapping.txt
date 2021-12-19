@@ -1,8 +1,2 @@
-fuelInjection/domain/SonataTest.java
- fuelInjection.domain.SonataTest
-fuelInjection/domain/AvanteTest.java
- fuelInjection.domain.AvanteTest
-fuelInjection/domain/K5Test.java
- fuelInjection.domain.K5Test
-fuelInjection/domain/CompanyTest.java
- fuelInjection.domain.CompanyTest
+coordinateCalculator/utils/ValidationUtilTest.java
+ coordinateCalculator.utils.ValidationUtilTest
