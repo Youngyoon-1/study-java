@@ -2,3 +2,5 @@ coordinateCalculator/utils/ValidationUtilTest.java
  coordinateCalculator.utils.ValidationUtilTest
 coordinateCalculator/domain/ValueTest.java
  coordinateCalculator.domain.ValueTest
+coordinateCalculator/domain/CoordinateTest.java
+ coordinateCalculator.domain.CoordinateTest

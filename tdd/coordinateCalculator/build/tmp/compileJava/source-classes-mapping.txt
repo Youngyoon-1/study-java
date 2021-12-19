@@ -8,3 +8,5 @@ coordinateCalculator/domain/Value.java
  coordinateCalculator.domain.Value
 coordinateCalculator/Application.java
  coordinateCalculator.Application
+coordinateCalculator/domain/Coordinate.java
+ coordinateCalculator.domain.Coordinate
