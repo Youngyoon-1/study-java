@@ -10,3 +10,5 @@ coordinateCalculator/Application.java
  coordinateCalculator.Application
 coordinateCalculator/domain/Coordinate.java
  coordinateCalculator.domain.Coordinate
+coordinateCalculator/domain/Line.java
+ coordinateCalculator.domain.Line
