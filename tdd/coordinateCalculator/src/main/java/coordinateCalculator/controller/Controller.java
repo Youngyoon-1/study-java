@@ -7,7 +7,21 @@ import coordinateCalculator.view.ResultView;
 public class Controller {
     public void run() {
         String request = InputView.getCoordinates();
-        Line line = new Line(request);
-        ResultView.printBoard(line.getCoordinates());
+        if (isValidRequest(request)) {
+            Line line = new Line(request);
+            ResultView.printBoard(line.getCoordinates());
+            return;
+        }
+        run();
+    }
+
+    private boolean isValidRequest(String request) {
+        try {
+            new Line(request);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+        return true;
     }
 }

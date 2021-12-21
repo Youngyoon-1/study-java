@@ -3,8 +3,6 @@ package coordinateCalculator.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-import coordinateCalculator.view.ResultView;
-
 public class Line {
     public static final String COORDINATE_DELIMITER = "-";
     public static final int FIRST_COORDINATE_INDEX = 0;
