@@ -4,11 +4,15 @@ coordinateCalculator/CoordinateCalculator.java
  coordinateCalculator.CoordinateCalculator
 coordinateCalculator/utils/ValidationUtil.java
  coordinateCalculator.utils.ValidationUtil
+coordinateCalculator/view/ResultView.java
+ coordinateCalculator.view.ResultView
 coordinateCalculator/domain/Value.java
  coordinateCalculator.domain.Value
+coordinateCalculator/domain/Line.java
+ coordinateCalculator.domain.Line
 coordinateCalculator/Application.java
  coordinateCalculator.Application
 coordinateCalculator/domain/Coordinate.java
  coordinateCalculator.domain.Coordinate
-coordinateCalculator/domain/Line.java
- coordinateCalculator.domain.Line
+coordinateCalculator/controller/Controller.java
+ coordinateCalculator.controller.Controller

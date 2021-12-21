@@ -1,5 +1,10 @@
 package coordinateCalculator.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import coordinateCalculator.view.ResultView;
+
 public class Line {
     public static final String COORDINATE_DELIMITER = "-";
     public static final int FIRST_COORDINATE_INDEX = 0;
@@ -19,4 +24,12 @@ public class Line {
         int b = firstCoordinate.getY() - secondCoordinate.getY();
         return Math.sqrt(a * a + b * b);
     }
+
+    public List<Coordinate> getCoordinates() {
+        List<Coordinate> coordinates = new ArrayList<>();
+        coordinates.add(firstCoordinate);
+        coordinates.add(secondCoordinate);
+        return coordinates;
+    }
+
 }
