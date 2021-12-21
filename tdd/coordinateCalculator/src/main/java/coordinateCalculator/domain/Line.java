@@ -8,26 +8,26 @@ public class Line {
     public static final int FIRST_COORDINATE_INDEX = 0;
     public static final int SECOND_COORDINATE_INDEX = 1;
 
-    private final Coordinate firstCoordinate;
-    private final Coordinate secondCoordinate;
+    private final Point firstPoint;
+    private final Point secondPoint;
 
     public Line(String input) {
         String[] coordinates = input.split(COORDINATE_DELIMITER);
-        firstCoordinate = new Coordinate(coordinates[FIRST_COORDINATE_INDEX]);
-        secondCoordinate = new Coordinate(coordinates[SECOND_COORDINATE_INDEX]);
+        firstPoint = new Point(coordinates[FIRST_COORDINATE_INDEX]);
+        secondPoint = new Point(coordinates[SECOND_COORDINATE_INDEX]);
     }
 
     public double length() {
-        int a = firstCoordinate.getX() - secondCoordinate.getX();
-        int b = firstCoordinate.getY() - secondCoordinate.getY();
+        int a = firstPoint.getX() - secondPoint.getX();
+        int b = firstPoint.getY() - secondPoint.getY();
         return Math.sqrt(a * a + b * b);
     }
 
-    public List<Coordinate> getCoordinates() {
-        List<Coordinate> coordinates = new ArrayList<>();
-        coordinates.add(firstCoordinate);
-        coordinates.add(secondCoordinate);
-        return coordinates;
+    public List<Point> getCoordinates() {
+        List<Point> points = new ArrayList<>();
+        points.add(firstPoint);
+        points.add(secondPoint);
+        return points;
     }
 
 }

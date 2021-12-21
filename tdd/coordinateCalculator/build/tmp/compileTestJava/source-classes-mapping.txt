@@ -1,8 +1,8 @@
 coordinateCalculator/utils/ValidationUtilTest.java
  coordinateCalculator.utils.ValidationUtilTest
-coordinateCalculator/domain/ValueTest.java
- coordinateCalculator.domain.ValueTest
-coordinateCalculator/domain/CoordinateTest.java
- coordinateCalculator.domain.CoordinateTest
 coordinateCalculator/domain/LineTest.java
  coordinateCalculator.domain.LineTest
+coordinateCalculator/domain/PointTest.java
+ coordinateCalculator.domain.PointTest
+coordinateCalculator/domain/ValueTest.java
+ coordinateCalculator.domain.ValueTest

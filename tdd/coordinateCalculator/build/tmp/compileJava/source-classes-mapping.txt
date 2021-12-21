@@ -1,7 +1,5 @@
 coordinateCalculator/view/InputView.java
  coordinateCalculator.view.InputView
-coordinateCalculator/CoordinateCalculator.java
- coordinateCalculator.CoordinateCalculator
 coordinateCalculator/utils/ValidationUtil.java
  coordinateCalculator.utils.ValidationUtil
 coordinateCalculator/view/ResultView.java
@@ -12,7 +10,7 @@ coordinateCalculator/domain/Line.java
  coordinateCalculator.domain.Line
 coordinateCalculator/Application.java
  coordinateCalculator.Application
-coordinateCalculator/domain/Coordinate.java
- coordinateCalculator.domain.Coordinate
+coordinateCalculator/domain/Point.java
+ coordinateCalculator.domain.Point
 coordinateCalculator/controller/Controller.java
  coordinateCalculator.controller.Controller

@@ -4,7 +4,7 @@ import static coordinateCalculator.domain.Value.*;
 
 import java.util.List;
 
-import coordinateCalculator.domain.Coordinate;
+import coordinateCalculator.domain.Point;
 
 public class ResultView {
     public static final String SPACE_STRING = "    ";
@@ -13,17 +13,17 @@ public class ResultView {
     public static final String ORIGIN_MARK = "+";
     public static final String HORIZONTAL_MARK = "----";
 
-    public static void printBoard(List<Coordinate> coordinates) {
+    public static void printBoard(List<Point> points) {
         emptyLine();
-        printVerticalLineWithCoordinates(coordinates);
+        printVerticalLineWithCoordinates(points);
         printHorizontalLine();
     }
 
-    private static void printVerticalLineWithCoordinates(List<Coordinate> coordinates) {
+    private static void printVerticalLineWithCoordinates(List<Point> points) {
         for (int i = MAXIMUM_VALUE; i >= MINIMUM_VALUE; i--) {
             printVerticalNumber(i);
             System.out.print(VERTICAL_MARK);
-            printCoordinate(i, coordinates);
+            printCoordinate(i, points);
             emptyLine();
         }
     }
@@ -52,9 +52,9 @@ public class ResultView {
         emptyLine();
     }
 
-    private static void printCoordinate(int i, List<Coordinate> coordinates) {
+    private static void printCoordinate(int i, List<Point> points) {
         for (int j = MINIMUM_VALUE; j <= MAXIMUM_VALUE; j++) {
-            printCoordinate(i, j, coordinates);
+            printCoordinate(i, j, points);
         }
     }
 
@@ -62,17 +62,17 @@ public class ResultView {
         System.out.println();
     }
 
-    private static void printCoordinate(int i, int j, List<Coordinate> coordinates) {
-        if (isSameCoordinate(i, j, coordinates)) {
+    private static void printCoordinate(int i, int j, List<Point> points) {
+        if (isSameCoordinate(i, j, points)) {
             System.out.printf("%4s", COORDINATE_MARK);
             return;
         }
         System.out.print(SPACE_STRING);
     }
 
-    private static boolean isSameCoordinate(int i, int j, List<Coordinate> coordinates) {
-        return coordinates.stream().anyMatch(coordinate -> {
-            if (coordinate.getY() == i && coordinate.getX() == j) {
+    private static boolean isSameCoordinate(int i, int j, List<Point> points) {
+        return points.stream().anyMatch(point -> {
+            if (point.getY() == i && point.getX() == j) {
                 return true;
             }
             return false;

@@ -6,13 +6,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class CoordinateTest {
+public class PointTest {
     @DisplayName("두개의 숫자로 첫번째는 x 두번째는 y 생성")
     @ParameterizedTest
-    @CsvSource(value = {"(0,9):0:9", "(1,8):1:8"}, delimiter = ':')
+    @CsvSource(value = {"(1,9):1:9", "(4,5):4:5"}, delimiter = ':')
     void createValueTest(String parameter, int xValue, int yValue) {
-        Coordinate coordinate = new Coordinate(parameter);
-        assertThat(coordinate.getX()).isEqualTo(xValue);
-        assertThat(coordinate.getY()).isEqualTo(yValue);
+        Point point = new Point(parameter);
+        assertThat(point.getX()).isEqualTo(xValue);
+        assertThat(point.getY()).isEqualTo(yValue);
     }
 }
