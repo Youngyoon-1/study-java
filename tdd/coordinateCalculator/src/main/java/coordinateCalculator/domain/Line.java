@@ -1,10 +1,11 @@
 package coordinateCalculator.domain;
 
+import static coordinateCalculator.domain.FigureFactory.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Line {
-    public static final String COORDINATE_DELIMITER = "-";
+public class Line implements Figure{
     public static final int FIRST_COORDINATE_INDEX = 0;
     public static final int SECOND_COORDINATE_INDEX = 1;
 
