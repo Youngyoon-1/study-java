@@ -86,4 +86,9 @@ public class ResultView {
         }
         System.out.print(SPACE_STRING);
     }
+
+    public static void printResult(double length) {
+        emptyLine();
+        System.out.println("두 점 사이 거리는 " + length);
+    }
 }

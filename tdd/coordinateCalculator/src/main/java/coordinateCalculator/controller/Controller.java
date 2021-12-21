@@ -10,6 +10,7 @@ public class Controller {
         if (isValidRequest(request)) {
             Line line = new Line(request);
             ResultView.printBoard(line.getCoordinates());
+            ResultView.printResult(line.length());
             return;
         }
         run();
