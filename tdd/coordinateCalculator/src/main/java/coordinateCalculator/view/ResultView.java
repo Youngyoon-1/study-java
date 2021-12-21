@@ -7,7 +7,6 @@ import java.util.List;
 import coordinateCalculator.domain.Coordinate;
 
 public class ResultView {
-    public static final int MINIMUM_VALUE = 1;
     public static final String SPACE_STRING = "    ";
     public static final String VERTICAL_MARK = "|";
     public static final String COORDINATE_MARK = ".";
