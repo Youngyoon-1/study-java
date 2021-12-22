@@ -20,7 +20,7 @@ public class Controller {
 
     private boolean isValidRequest(String request) {
         try {
-            new Line(request);
+            FigureFactory.from(request);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return false;

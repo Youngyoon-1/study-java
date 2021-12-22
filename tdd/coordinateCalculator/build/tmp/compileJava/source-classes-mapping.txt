@@ -10,8 +10,8 @@ coordinateCalculator/domain/Points.java
  coordinateCalculator.domain.Points
 coordinateCalculator/domain/Rectangle.java
  coordinateCalculator.domain.Rectangle
-coordinateCalculator/controller/Controller.java
- coordinateCalculator.controller.Controller
+coordinateCalculator/domain/FigureMapper.java
+ coordinateCalculator.domain.FigureMapper
 coordinateCalculator/domain/Point.java
  coordinateCalculator.domain.Point
 coordinateCalculator/domain/Figure.java
@@ -20,11 +20,11 @@ coordinateCalculator/domain/FigureFactory.java
  coordinateCalculator.domain.FigureFactory
 coordinateCalculator/utils/ValidationUtil.java
  coordinateCalculator.utils.ValidationUtil
-coordinateCalculator/Application.java
- coordinateCalculator.Application
-coordinateCalculator/dto/Result.java
- coordinateCalculator.dto.Result
-coordinateCalculator/domain/FigureMapper.java
- coordinateCalculator.domain.FigureMapper
 coordinateCalculator/domain/Triangle.java
  coordinateCalculator.domain.Triangle
+coordinateCalculator/dto/Result.java
+ coordinateCalculator.dto.Result
+coordinateCalculator/Application.java
+ coordinateCalculator.Application
+coordinateCalculator/controller/Controller.java
+ coordinateCalculator.controller.Controller
