@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coordinateCalculator.domain.FigureFactoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-12-21T11:41:42" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.109">
-  <properties/>
-  <testcase name="네 개의 경우 Rectangle 객체 생성" classname="coordinateCalculator.domain.FigureFactoryTest" time="0.101"/>
-  <testcase name="좌표 두 개의 경우 Line 객체 생성" classname="coordinateCalculator.domain.FigureFactoryTest" time="0.004"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

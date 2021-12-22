@@ -1,5 +1,6 @@
 package coordinateCalculator.utils;
 
+import static coordinateCalculator.domain.Figure.*;
 import static coordinateCalculator.domain.FigureFactory.*;
 
 import java.util.Arrays;
