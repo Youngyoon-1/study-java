@@ -1,7 +1,6 @@
 package coordinateCalculator.utils;
 
 import static coordinateCalculator.domain.Figure.*;
-import static coordinateCalculator.domain.FigureFactory.*;
 
 import java.util.Arrays;
 import java.util.regex.Pattern;
@@ -15,7 +14,10 @@ public class ValidationUtil {
     public static void checkForm(String input) {
         String lineRegex = COORDINATE_TEMPLATE + COORDINATE_DELIMITER + COORDINATE_TEMPLATE;
         String rectangleRegex = lineRegex + COORDINATE_DELIMITER + lineRegex;
-        if (!Pattern.matches(lineRegex, input) && !Pattern.matches(rectangleRegex, input)) {
+        String triangleRegex = lineRegex + COORDINATE_DELIMITER + COORDINATE_TEMPLATE;
+        if (!Pattern.matches(lineRegex, input)
+            && !Pattern.matches(rectangleRegex, input)
+            && !Pattern.matches(triangleRegex, input)) {
             throw new IllegalArgumentException(ERROR_PREFIX + ERROR_INVALID_FORM);
         }
     }

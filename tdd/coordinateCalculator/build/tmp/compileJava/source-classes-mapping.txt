@@ -16,10 +16,10 @@ coordinateCalculator/domain/FigureMapper.java
  coordinateCalculator.domain.FigureMapper
 coordinateCalculator/domain/Figure.java
  coordinateCalculator.domain.Figure
-coordinateCalculator/utils/ValidationUtil.java
- coordinateCalculator.utils.ValidationUtil
 coordinateCalculator/domain/FigureFactory.java
  coordinateCalculator.domain.FigureFactory
+coordinateCalculator/utils/ValidationUtil.java
+ coordinateCalculator.utils.ValidationUtil
 coordinateCalculator/Application.java
  coordinateCalculator.Application
 coordinateCalculator/dto/Result.java
