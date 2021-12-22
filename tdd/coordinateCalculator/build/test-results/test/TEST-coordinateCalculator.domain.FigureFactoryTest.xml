@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coordinateCalculator.domain.FigureFactoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-12-22T08:17:14" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.006">
+<testsuite name="coordinateCalculator.domain.FigureFactoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-22T11:11:46" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.126">
   <properties/>
-  <testcase name="좌표가 네 개인 경우 Rectangle 객체 생성" classname="coordinateCalculator.domain.FigureFactoryTest" time="0.003"/>
-  <testcase name="좌표가 두 개인 경우 Line 객체 생성" classname="coordinateCalculator.domain.FigureFactoryTest" time="0.001"/>
+  <testcase name="좌표가 세 개인 경우 Triangle 객체 생성" classname="coordinateCalculator.domain.FigureFactoryTest" time="0.106"/>
+  <testcase name="좌표가 네 개인 경우 Rectangle 객체 생성" classname="coordinateCalculator.domain.FigureFactoryTest" time="0.012"/>
+  <testcase name="좌표가 두 개인 경우 Line 객체 생성" classname="coordinateCalculator.domain.FigureFactoryTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -19,4 +19,11 @@ public class FigureFactoryTest {
         Figure figure = FigureFactory.from("(10,10)-(22,10)-(22,18)-(10,18)");
         assertThat(figure instanceof Rectangle).isTrue();
     }
+
+    @DisplayName("좌표가 세 개인 경우 Triangle 객체 생성")
+    @Test
+    void createTriangle() {
+        Figure figure = FigureFactory.from("(10,10)-(14,15)-(20,8)");
+        assertThat(figure instanceof Triangle).isTrue();
+    }
 }
