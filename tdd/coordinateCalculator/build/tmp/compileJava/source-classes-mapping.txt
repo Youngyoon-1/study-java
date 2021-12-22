@@ -12,8 +12,8 @@ coordinateCalculator/domain/Rectangle.java
  coordinateCalculator.domain.Rectangle
 coordinateCalculator/controller/Controller.java
  coordinateCalculator.controller.Controller
-coordinateCalculator/domain/FigureMapper.java
- coordinateCalculator.domain.FigureMapper
+coordinateCalculator/domain/Point.java
+ coordinateCalculator.domain.Point
 coordinateCalculator/domain/Figure.java
  coordinateCalculator.domain.Figure
 coordinateCalculator/domain/FigureFactory.java
@@ -24,7 +24,7 @@ coordinateCalculator/Application.java
  coordinateCalculator.Application
 coordinateCalculator/dto/Result.java
  coordinateCalculator.dto.Result
+coordinateCalculator/domain/FigureMapper.java
+ coordinateCalculator.domain.FigureMapper
 coordinateCalculator/domain/Triangle.java
  coordinateCalculator.domain.Triangle
-coordinateCalculator/domain/Point.java
- coordinateCalculator.domain.Point

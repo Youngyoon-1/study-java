@@ -21,6 +21,11 @@ public class Line implements Figure {
         secondPoint = points.get(SECOND_COORDINATE_INDEX);
     }
 
+    public Line(Point firstPoint, Point secondPoint) {
+        this.firstPoint = firstPoint;
+        this.secondPoint = secondPoint;
+    }
+
     public double length() {
         int a = firstPoint.getX() - secondPoint.getX();
         int b = firstPoint.getY() - secondPoint.getY();
