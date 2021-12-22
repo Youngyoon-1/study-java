@@ -42,4 +42,9 @@ public class Triangle implements Figure {
     public List<Point> coordinates() {
         return points.points();
     }
+
+    @Override
+    public String toString() {
+        return "삼각형 넓이는 ";
+    }
 }
