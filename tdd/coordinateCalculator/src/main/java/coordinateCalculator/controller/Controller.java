@@ -2,7 +2,6 @@ package coordinateCalculator.controller;
 
 import coordinateCalculator.domain.Figure;
 import coordinateCalculator.domain.FigureFactory;
-import coordinateCalculator.domain.Line;
 import coordinateCalculator.view.InputView;
 import coordinateCalculator.view.ResultView;
 

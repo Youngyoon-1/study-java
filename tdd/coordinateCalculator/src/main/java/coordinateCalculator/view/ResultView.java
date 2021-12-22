@@ -85,6 +85,6 @@ public class ResultView {
 
     public static void printResult(Result result) {
         emptyLine();
-        System.out.println(result.toString());
+        System.out.println(result.getPrefix() + result.getResult());
     }
 }

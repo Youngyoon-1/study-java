@@ -1,6 +1,6 @@
 package coordinateCalculator.dto;
 
-public class Result <T> {
+public class Result<T> {
     private final String prefix;
     private final T result;
 
@@ -9,8 +9,11 @@ public class Result <T> {
         this.result = result;
     }
 
-    @Override
-    public String toString() {
-        return prefix + result;
+    public String getPrefix() {
+        return prefix;
+    }
+
+    public T getResult() {
+        return result;
     }
 }
