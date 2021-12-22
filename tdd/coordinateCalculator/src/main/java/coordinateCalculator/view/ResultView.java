@@ -5,6 +5,7 @@ import static coordinateCalculator.domain.Value.*;
 import java.util.List;
 
 import coordinateCalculator.domain.Point;
+import coordinateCalculator.dto.Result;
 
 public class ResultView {
     public static final String SPACE_STRING = "    ";
@@ -20,10 +21,10 @@ public class ResultView {
     }
 
     private static void printVerticalLineWithCoordinates(List<Point> points) {
-        for (int i = MAXIMUM_VALUE; i >= MINIMUM_VALUE; i--) {
-            printVerticalNumber(i);
+        for (int y = MAXIMUM_VALUE; y >= MINIMUM_VALUE; y--) {
+            printVerticalNumber(y);
             System.out.print(VERTICAL_MARK);
-            printCoordinate(i, points);
+            printCoordinate(y, points);
             emptyLine();
         }
     }
@@ -35,9 +36,9 @@ public class ResultView {
 
     private static void printHorizontalNumber() {
         System.out.printf("%4d ", 0);
-        for (int i = MINIMUM_VALUE; i <= MAXIMUM_VALUE; i++) {
-            if (i % 2 == 0) {
-                System.out.printf("%4d", i);
+        for (int x = MINIMUM_VALUE; x <= MAXIMUM_VALUE; x++) {
+            if (x % 2 == 0) {
+                System.out.printf("%4d", x);
                 continue;
             }
             System.out.print(SPACE_STRING);
@@ -52,9 +53,9 @@ public class ResultView {
         emptyLine();
     }
 
-    private static void printCoordinate(int i, List<Point> points) {
-        for (int j = MINIMUM_VALUE; j <= MAXIMUM_VALUE; j++) {
-            printCoordinate(i, j, points);
+    private static void printCoordinate(int y, List<Point> points) {
+        for (int x = MINIMUM_VALUE; x <= MAXIMUM_VALUE; x++) {
+            printCoordinate(y, x, points);
         }
     }
 
@@ -62,33 +63,28 @@ public class ResultView {
         System.out.println();
     }
 
-    private static void printCoordinate(int i, int j, List<Point> points) {
-        if (isSameCoordinate(i, j, points)) {
+    private static void printCoordinate(int y, int x, List<Point> points) {
+        if (isSameCoordinate(y, x, points)) {
             System.out.printf("%4s", COORDINATE_MARK);
             return;
         }
         System.out.print(SPACE_STRING);
     }
 
-    private static boolean isSameCoordinate(int i, int j, List<Point> points) {
-        return points.stream().anyMatch(point -> {
-            if (point.getY() == i && point.getX() == j) {
-                return true;
-            }
-            return false;
-        });
+    private static boolean isSameCoordinate(int y, int x, List<Point> points) {
+        return points.stream().anyMatch(point -> point.getY() == y && point.getX() == x);
     }
 
-    private static void printVerticalNumber(int i) {
-        if (i % 2 == 0) {
-            System.out.printf("%4d", i);
+    private static void printVerticalNumber(int y) {
+        if (y % 2 == 0) {
+            System.out.printf("%4d", y);
             return;
         }
         System.out.print(SPACE_STRING);
     }
 
-    public static void printResult(double length) {
+    public static void printResult(Result result) {
         emptyLine();
-        System.out.println("두 점 사이 거리는 " + length);
+        System.out.println(result.toString());
     }
 }

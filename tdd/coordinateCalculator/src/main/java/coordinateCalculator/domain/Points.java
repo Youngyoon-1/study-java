@@ -33,4 +33,8 @@ public class Points {
         int x = points.get(REFERENCE_POINT_INDEX).getX();
         return points.stream().filter(point -> point.getX() == x).collect(Collectors.toList());
     }
+
+    public List<Point> points() {
+        return points;
+    }
 }

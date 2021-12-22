@@ -1,11 +1,9 @@
 package coordinateCalculator.domain;
 
-import static coordinateCalculator.domain.FigureFactory.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Line implements Figure{
+public class Line implements Figure {
     public static final int FIRST_COORDINATE_INDEX = 0;
     public static final int SECOND_COORDINATE_INDEX = 1;
 
@@ -29,11 +27,21 @@ public class Line implements Figure{
         return Math.sqrt(a * a + b * b);
     }
 
-    public List<Point> getCoordinates() {
+    @Override
+    public Double calculate() {
+        return this.length();
+    }
+
+    @Override
+    public List<Point> coordinates() {
         List<Point> points = new ArrayList<>();
         points.add(firstPoint);
         points.add(secondPoint);
         return points;
     }
 
+    @Override
+    public String toString() {
+        return "두 점 사이 거리는 ";
+    }
 }

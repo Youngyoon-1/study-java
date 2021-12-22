@@ -1,9 +1,17 @@
 package coordinateCalculator.domain;
 
-public interface Figure {
-   String COORDINATE_DELIMITER = "-";
+import java.util.List;
 
-   default double calculate(){
-      return 0;
+import coordinateCalculator.dto.Result;
+
+public interface Figure<T> {
+    String COORDINATE_DELIMITER = "-";
+
+    T calculate();
+
+    List<Point> coordinates();
+
+    default Result getResult() {
+        return new Result(this.toString(), calculate());
    }
 }

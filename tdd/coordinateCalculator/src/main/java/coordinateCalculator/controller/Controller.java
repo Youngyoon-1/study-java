@@ -1,5 +1,7 @@
 package coordinateCalculator.controller;
 
+import coordinateCalculator.domain.Figure;
+import coordinateCalculator.domain.FigureFactory;
 import coordinateCalculator.domain.Line;
 import coordinateCalculator.view.InputView;
 import coordinateCalculator.view.ResultView;
@@ -8,9 +10,9 @@ public class Controller {
     public void run() {
         String request = InputView.getCoordinates();
         if (isValidRequest(request)) {
-            Line line = new Line(request);
-            ResultView.printBoard(line.getCoordinates());
-            ResultView.printResult(line.length());
+            Figure figure = FigureFactory.from(request);
+            ResultView.printBoard(figure.coordinates());
+            ResultView.printResult(figure.getResult());
             return;
         }
         run();

@@ -16,6 +16,8 @@ coordinateCalculator/domain/Points.java
  coordinateCalculator.domain.Points
 coordinateCalculator/Application.java
  coordinateCalculator.Application
+coordinateCalculator/dto/Result.java
+ coordinateCalculator.dto.Result
 coordinateCalculator/domain/Rectangle.java
  coordinateCalculator.domain.Rectangle
 coordinateCalculator/domain/Point.java
