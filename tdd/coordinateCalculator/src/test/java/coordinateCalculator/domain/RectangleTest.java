@@ -22,4 +22,10 @@ public class RectangleTest {
     void invalidInput(String input) {
         assertThatThrownBy(() -> new Rectangle(input)).hasMessage(ERROR_INVALID_VALUE);
     }
+
+    @DisplayName("사각형의 넓이 구하기")
+    @Test
+    void calculateArea() {
+        assertThat(new Rectangle("(10,10)-(22,10)-(22,18)-(10,18)").calculate()).isEqualTo(96);
+    }
 }

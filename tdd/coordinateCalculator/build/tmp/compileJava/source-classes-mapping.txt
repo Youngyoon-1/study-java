@@ -4,21 +4,21 @@ coordinateCalculator/domain/Figure.java
  coordinateCalculator.domain.Figure
 coordinateCalculator/utils/ValidationUtil.java
  coordinateCalculator.utils.ValidationUtil
-coordinateCalculator/domain/Point.java
- coordinateCalculator.domain.Point
+coordinateCalculator/domain/FigureFactory.java
+ coordinateCalculator.domain.FigureFactory
 coordinateCalculator/view/ResultView.java
  coordinateCalculator.view.ResultView
 coordinateCalculator/domain/Value.java
  coordinateCalculator.domain.Value
 coordinateCalculator/domain/Line.java
  coordinateCalculator.domain.Line
-coordinateCalculator/controller/Controller.java
- coordinateCalculator.controller.Controller
-coordinateCalculator/Application.java
- coordinateCalculator.Application
-coordinateCalculator/domain/FigureFactory.java
- coordinateCalculator.domain.FigureFactory
 coordinateCalculator/domain/Points.java
  coordinateCalculator.domain.Points
+coordinateCalculator/Application.java
+ coordinateCalculator.Application
 coordinateCalculator/domain/Rectangle.java
  coordinateCalculator.domain.Rectangle
+coordinateCalculator/domain/Point.java
+ coordinateCalculator.domain.Point
+coordinateCalculator/controller/Controller.java
+ coordinateCalculator.controller.Controller

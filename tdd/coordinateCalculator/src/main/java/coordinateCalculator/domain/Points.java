@@ -9,7 +9,8 @@ import java.util.stream.Collectors;
 
 public class Points {
     public static final int DUPLICATION_COUNT = 2;
-    
+    public static final int REFERENCE_POINT_INDEX = 0;
+
     private final List<Point> points = new ArrayList<>();
 
     public Points(String input) {
@@ -21,5 +22,15 @@ public class Points {
         List<Integer> yValues = points.stream().map(Point::getY).collect(Collectors.toList());
         return xValues.stream().distinct().count() == DUPLICATION_COUNT
             && yValues.stream().distinct().count() == DUPLICATION_COUNT;
+    }
+
+    public List<Point> getWidthPoints() {
+        int y = points.get(REFERENCE_POINT_INDEX).getY();
+        return points.stream().filter(point -> point.getY() == y).collect(Collectors.toList());
+    }
+
+    public List<Point> getHeightPoints() {
+        int x = points.get(REFERENCE_POINT_INDEX).getX();
+        return points.stream().filter(point -> point.getX() == x).collect(Collectors.toList());
     }
 }
