@@ -1,16 +1,16 @@
-coordinateCalculator/domain/PointsTest.java
- coordinateCalculator.domain.PointsTest
-coordinateCalculator/domain/ValueTest.java
- coordinateCalculator.domain.ValueTest
-coordinateCalculator/utils/ValidationUtilTest.java
- coordinateCalculator.utils.ValidationUtilTest
 coordinateCalculator/domain/PointTest.java
  coordinateCalculator.domain.PointTest
+coordinateCalculator/domain/ValueTest.java
+ coordinateCalculator.domain.ValueTest
 coordinateCalculator/domain/RectangleTest.java
  coordinateCalculator.domain.RectangleTest
+coordinateCalculator/utils/ValidationUtilTest.java
+ coordinateCalculator.utils.ValidationUtilTest
 coordinateCalculator/domain/LineTest.java
  coordinateCalculator.domain.LineTest
-coordinateCalculator/domain/FigureFactoryTest.java
- coordinateCalculator.domain.FigureFactoryTest
 coordinateCalculator/domain/TriangleTest.java
  coordinateCalculator.domain.TriangleTest
+coordinateCalculator/domain/FigureFactoryTest.java
+ coordinateCalculator.domain.FigureFactoryTest
+coordinateCalculator/domain/PointsTest.java
+ coordinateCalculator.domain.PointsTest

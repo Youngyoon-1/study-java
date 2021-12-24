@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coordinateCalculator.domain.FigureFactoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-22T13:10:48" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.009">
+<testsuite name="coordinateCalculator.domain.FigureFactoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-22T13:46:11" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.009">
   <properties/>
   <testcase name="좌표가 세 개인 경우 Triangle 객체 생성" classname="coordinateCalculator.domain.FigureFactoryTest" time="0.004"/>
   <testcase name="좌표가 네 개인 경우 Rectangle 객체 생성" classname="coordinateCalculator.domain.FigureFactoryTest" time="0.002"/>
