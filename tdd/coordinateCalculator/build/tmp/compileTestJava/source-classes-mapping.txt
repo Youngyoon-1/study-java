@@ -1,3 +1,5 @@
+coordinateCalculator/domain/RectangleTest.java
+ coordinateCalculator.domain.RectangleTest
 coordinateCalculator/domain/PointTest.java
  coordinateCalculator.domain.PointTest
 coordinateCalculator/domain/LineTest.java

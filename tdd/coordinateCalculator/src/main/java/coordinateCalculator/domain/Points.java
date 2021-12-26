@@ -1,5 +1,6 @@
 package coordinateCalculator.domain;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class Points {
@@ -11,5 +12,9 @@ public class Points {
 
     public double calculate() {
         return points.get(0).calculateDistance(points.get(1));
+    }
+
+    public boolean isInvalidPoints(int pointCount) {
+        return pointCount != new HashSet<>(points).size();
     }
 }

@@ -1,5 +1,7 @@
 package coordinateCalculator.domain;
 
+import java.util.Objects;
+
 public class Point {
     public static final int COORDINATE_MINIMUM_NUMBER = 1;
     public static final int COORDINATE_MAXIMUM_NUMBER = 24;
@@ -38,5 +40,20 @@ public class Point {
 
     private int getXDifference(Point other) {
         return x - other.x;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Point point = (Point)o;
+        return x == point.x && y == point.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
     }
 }

@@ -1,7 +1,7 @@
 package coordinateCalculator.domain;
 
-public abstract class AbstractFigure implements Figure{
-    private Points points;
+public abstract class AbstractFigure implements Figure {
+    private final Points points;
 
     AbstractFigure(Points points) {
         this.points = points;
@@ -11,4 +11,6 @@ public abstract class AbstractFigure implements Figure{
     public Points points() {
         return points;
     }
+
+
 }

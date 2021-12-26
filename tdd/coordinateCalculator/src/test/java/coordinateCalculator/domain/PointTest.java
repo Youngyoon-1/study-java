@@ -29,4 +29,11 @@ public class PointTest {
         assertThat(Point.of(10, 10).calculateDistance(Point.of(14, 15))).isEqualTo(6.403124, offset(0.000001d));
     }
 
+    @DisplayName("두 점 비교하기")
+    @Test
+    void compare() {
+        assertThat(Point.of(10, 10).equals(Point.of(10, 10))).isTrue();
+        assertThat(Point.of(9, 10).equals(Point.of(10, 10))).isFalse();
+    }
+
 }
