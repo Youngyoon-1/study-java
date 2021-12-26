@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coordinateCalculator.domain.PointTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-12-25T08:02:39" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.108">
+<testsuite name="coordinateCalculator.domain.PointTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-26T07:27:21" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.052">
   <properties/>
-  <testcase name="[1] 0, 1" classname="coordinateCalculator.domain.PointTest" time="0.074"/>
-  <testcase name="[2] 0, 24" classname="coordinateCalculator.domain.PointTest" time="0.002"/>
-  <testcase name="[3] 1, 25" classname="coordinateCalculator.domain.PointTest" time="0.005"/>
-  <testcase name="[4] 24, 25" classname="coordinateCalculator.domain.PointTest" time="0.002"/>
-  <testcase name="[5] 0, 25" classname="coordinateCalculator.domain.PointTest" time="0.001"/>
+  <testcase name="두 점 사이 거리 구하기" classname="coordinateCalculator.domain.PointTest" time="0.052"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
