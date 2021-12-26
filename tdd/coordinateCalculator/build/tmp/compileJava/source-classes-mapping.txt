@@ -1,2 +1,10 @@
 coordinateCalculator/domain/Point.java
  coordinateCalculator.domain.Point
+coordinateCalculator/domain/Figure.java
+ coordinateCalculator.domain.Figure
+coordinateCalculator/domain/AbstractFigure.java
+ coordinateCalculator.domain.AbstractFigure
+coordinateCalculator/domain/Line.java
+ coordinateCalculator.domain.Line
+coordinateCalculator/domain/Points.java
+ coordinateCalculator.domain.Points
