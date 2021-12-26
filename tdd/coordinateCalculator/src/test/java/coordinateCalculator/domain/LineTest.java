@@ -11,10 +11,18 @@ import org.junit.jupiter.api.Test;
 
 
 public class LineTest {
-    @DisplayName("선 생성시 유효성 검사, 2개의 점이 아닌 경우")
+    @DisplayName("선 생성시 유효성 검사, 선의 점 갯수가 하나일 경우")
     @Test
-    void invalidPoints() {
+    void onePoint() {
         Points points = new Points(Collections.singletonList(Point.of(10, 10)));
+        assertThatThrownBy(() -> new Line(points)).hasMessage(ERROR_INVALID_POINT_COUNT);
+    }
+
+    @DisplayName("선 생성시 유효성 검사, 선의 점 갯수가 세 개일 경우")
+    @Test
+    void threePoint() {
+        Points points
+            = new Points(Arrays.asList(Point.of(10, 10), Point.of(11, 11), Point.of(12, 12)));
         assertThatThrownBy(() -> new Line(points)).hasMessage(ERROR_INVALID_POINT_COUNT);
     }
 

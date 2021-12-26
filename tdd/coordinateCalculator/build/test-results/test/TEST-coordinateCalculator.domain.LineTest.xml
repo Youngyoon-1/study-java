@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coordinateCalculator.domain.LineTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-12-26T08:42:35" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.105">
-  <properties/>
-  <testcase name="선 생성시 유효성 검사, 2개의 점이 아닌 경우" classname="coordinateCalculator.domain.LineTest" time="0.098"/>
-  <testcase name="선 길이 구하기" classname="coordinateCalculator.domain.LineTest" time="0.004"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
