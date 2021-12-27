@@ -11,7 +11,7 @@ public class Line extends AbstractFigure {
 
     @Override
     public double area() {
-        return points().calculate();
+        return points().calculateLine();
     }
 
     @Override

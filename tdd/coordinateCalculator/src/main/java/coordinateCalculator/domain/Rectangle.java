@@ -19,7 +19,7 @@ public class Rectangle extends AbstractFigure {
 
     @Override
     public double area() {
-        return Math.abs(points().getDifferenceX() *  points().getDifferenceY());
+        return points().calculateRectangle();
     }
 
     @Override

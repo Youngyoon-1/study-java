@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="coordinateCalculator.domain.TriangleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-27T15:59:07" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.099">
+  <properties/>
+  <testcase name="삼각형 면적 구하기" classname="coordinateCalculator.domain.TriangleTest" time="0.099"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

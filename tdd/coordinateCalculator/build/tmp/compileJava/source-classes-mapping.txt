@@ -8,5 +8,7 @@ coordinateCalculator/domain/Points.java
  coordinateCalculator.domain.Points
 coordinateCalculator/domain/Rectangle.java
  coordinateCalculator.domain.Rectangle
+coordinateCalculator/domain/Triangle.java
+ coordinateCalculator.domain.Triangle
 coordinateCalculator/domain/Point.java
  coordinateCalculator.domain.Point

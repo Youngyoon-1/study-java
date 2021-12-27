@@ -12,7 +12,7 @@ public class Points {
         this.points = points;
     }
 
-    public double calculate() {
+    public double calculateLine() {
         return points.get(0).calculateDistance(points.get(1));
     }
 
@@ -43,5 +43,18 @@ public class Points {
         Set<Integer> yCoordinates = points.stream().map(Point::getY).collect(Collectors.toSet());
 
         return xCoordinates.size() == 2 && yCoordinates.size() == 2;
+    }
+
+    public double calculateRectangle() {
+        return Math.abs(getDifferenceX() * getDifferenceY());
+    }
+
+    public double calculateTriangle() {
+        double a = points.get(0).calculateDistance(points.get(1));
+        double b = points.get(0).calculateDistance(points.get(2));
+        double c = points.get(1).calculateDistance(points.get(2));
+
+        double s = (a + b + c) / 2;
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
     }
 }
