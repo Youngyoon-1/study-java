@@ -1,6 +1,6 @@
 coordinateCalculator/domain/PointTest.java
  coordinateCalculator.domain.PointTest
-coordinateCalculator/domain/LineTest.java
- coordinateCalculator.domain.LineTest
 coordinateCalculator/domain/RectangleTest.java
  coordinateCalculator.domain.RectangleTest
+coordinateCalculator/domain/LineTest.java
+ coordinateCalculator.domain.LineTest

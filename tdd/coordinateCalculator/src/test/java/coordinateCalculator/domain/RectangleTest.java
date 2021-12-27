@@ -37,4 +37,12 @@ public class RectangleTest {
         ));
         assertThatThrownBy(() -> new Rectangle(points)).hasMessage(ERROR_INVALID_POINT_COUNT);
     }
+
+    @DisplayName("직사각형이 아닌 경우 예외 발생")
+    @Test
+    void invalidRectangle() {
+        Points points
+            = new Points(Arrays.asList(Point.of(11, 10), Point.of(22, 10), Point.of(22, 18), Point.of(10, 18)));
+        assertThatThrownBy(() -> new Rectangle(points)).hasMessage(ERROR_INVALID_RECTANGLE);
+    }
 }

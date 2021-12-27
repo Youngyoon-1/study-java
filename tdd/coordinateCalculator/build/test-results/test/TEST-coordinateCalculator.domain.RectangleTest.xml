@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coordinateCalculator.domain.RectangleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-26T11:54:59" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.109">
+<testsuite name="coordinateCalculator.domain.RectangleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-12-27T11:14:53" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.117">
   <properties/>
-  <testcase name="직사각형 넓이 구하기" classname="coordinateCalculator.domain.RectangleTest" time="0.095"/>
-  <testcase name="점이 세 개일 경우 예외 발생" classname="coordinateCalculator.domain.RectangleTest" time="0.005"/>
-  <testcase name="점이 다섯 개일 경우 예외 발생" classname="coordinateCalculator.domain.RectangleTest" time="0.004"/>
+  <testcase name="직사각형 넓이 구하기" classname="coordinateCalculator.domain.RectangleTest" time="0.101"/>
+  <testcase name="직사각형이 아닌 경우 예외 발생" classname="coordinateCalculator.domain.RectangleTest" time="0.003"/>
+  <testcase name="점이 세 개일 경우 예외 발생" classname="coordinateCalculator.domain.RectangleTest" time="0.003"/>
+  <testcase name="점이 다섯 개일 경우 예외 발생" classname="coordinateCalculator.domain.RectangleTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
