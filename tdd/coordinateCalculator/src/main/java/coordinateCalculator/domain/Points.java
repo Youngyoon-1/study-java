@@ -20,7 +20,7 @@ public class Points {
         return pointCount != new HashSet<>(points).size();
     }
 
-    public int getDifferenceX() {
+    private int getDifferenceX() {
         return points.stream()
             .map(Point::getX)
             .collect(Collectors.toSet())
@@ -29,7 +29,7 @@ public class Points {
             .get();
     }
 
-    public int getDifferenceY() {
+    private int getDifferenceY() {
         return points.stream()
             .map(Point::getY)
             .collect(Collectors.toSet())
@@ -56,5 +56,13 @@ public class Points {
 
         double s = (a + b + c) / 2;
         return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    }
+
+    public boolean canNotMakeTriangle() {
+        double a = points.get(0).calculateTilt(points.get(1));
+        double b = points.get(0).calculateTilt(points.get(2));
+        double c = points.get(1).calculateTilt(points.get(2));
+
+        return a == b && a == c;
     }
 }

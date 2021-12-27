@@ -29,4 +29,11 @@ public class TriangleTest {
         Points points = new Points(Arrays.asList(Point.of(10, 10), Point.of(14, 15), Point.of(20, 8), Point.of(18, 7)));
         assertThatThrownBy(() -> new Triangle(points)).hasMessage(ERROR_INVALID_POINT_COUNT);
     }
+
+    @DisplayName("삼각형의 점들이 한 선에 있을 경우 예외 발생")
+    @Test
+    void pointsOnStraightLine() {
+        Points points = new Points(Arrays.asList(Point.of(10, 10), Point.of(11, 11), Point.of(12, 12)));
+        assertThatThrownBy(() -> new Triangle(points)).hasMessage(ERROR_INVALID_TRIANGLE);
+    }
 }

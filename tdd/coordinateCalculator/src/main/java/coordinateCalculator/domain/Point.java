@@ -64,4 +64,11 @@ public class Point {
     public int getY() {
         return y;
     }
+
+    public double calculateTilt(Point other) {
+        if (x == other.x) {
+            return Double.MAX_VALUE;
+        }
+        return ((double)(y - other.y) / (x - other.x));
+    }
 }

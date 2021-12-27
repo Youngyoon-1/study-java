@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coordinateCalculator.domain.TriangleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-27T16:10:55" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.109">
+<testsuite name="coordinateCalculator.domain.TriangleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-12-27T18:05:33" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.114">
   <properties/>
-  <testcase name="삼각형 점 갯수가 2개 일 경우 예외발생" classname="coordinateCalculator.domain.TriangleTest" time="0.096"/>
+  <testcase name="삼각형 점 갯수가 2개 일 경우 예외발생" classname="coordinateCalculator.domain.TriangleTest" time="0.095"/>
   <testcase name="삼각형 면적 구하기" classname="coordinateCalculator.domain.TriangleTest" time="0.004"/>
+  <testcase name="삼각형의 점들이 한 선에 있을 경우 예외 발생" classname="coordinateCalculator.domain.TriangleTest" time="0.005"/>
   <testcase name="삼각형 점 갯수가 4개 일 경우 예외발생" classname="coordinateCalculator.domain.TriangleTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
