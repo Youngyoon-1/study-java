@@ -1,5 +1,6 @@
 package coordinateCalculator.domain;
 
+import static coordinateCalculator.domain.Triangle.*;
 import static org.assertj.core.api.Assertions.*;
 
 import java.util.Arrays;
@@ -13,5 +14,19 @@ public class TriangleTest {
     void area() {
         Points points = new Points(Arrays.asList(Point.of(10, 10), Point.of(14, 15), Point.of(20, 8)));
         assertThat(new Triangle(points).area()).isEqualTo(29.0, offset(0.1d));
+    }
+
+    @DisplayName("삼각형 점 갯수가 2개 일 경우 예외발생")
+    @Test
+    void twoPoints() {
+        Points points = new Points(Arrays.asList(Point.of(10, 10), Point.of(14, 15)));
+        assertThatThrownBy(() -> new Triangle(points)).hasMessage(ERROR_INVALID_POINT_COUNT);
+    }
+
+    @DisplayName("삼각형 점 갯수가 4개 일 경우 예외발생")
+    @Test
+    void fourPoints() {
+        Points points = new Points(Arrays.asList(Point.of(10, 10), Point.of(14, 15), Point.of(20, 8), Point.of(18, 7)));
+        assertThatThrownBy(() -> new Triangle(points)).hasMessage(ERROR_INVALID_POINT_COUNT);
     }
 }
