@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 import coordinateCalculator.domain.Figure;
 import coordinateCalculator.domain.FigureFactory;
@@ -12,16 +13,17 @@ import coordinateCalculator.domain.Points;
 
 public class InputView {
     private static final Scanner scanner = new Scanner(System.in);
+    public static final String ERROR_INVALID_INPUT = "[ERROR] 형식에 맞게 입력해주세요.";
 
     public static Figure input() {
         emptyLine();
         System.out.println("좌표를 입력하세요.");
-        String input = readLine();
-        Points points = generatePoints(input);
+        Points points = generatePoints(readLine());
         return FigureFactory.create(points);
     }
 
     static Points generatePoints(String input) {
+        checkValidation(input);
         List<Point> points = new ArrayList<>();
         String[] inputString = input.replaceAll("[()]", "").split("-");
         for (String s : inputString) {
@@ -39,6 +41,10 @@ public class InputView {
         System.out.println();
     }
 
-    public static void checkValidation(String s) {
+    public static void checkValidation(String input) {
+        String regex = "\\([0-9]{1,2},[0-9]{1,2}\\)(-\\([0-9]{1,2},[0-9]{1,2}\\))+";
+        if (!Pattern.matches(regex, input)) {
+            throw new IllegalArgumentException(ERROR_INVALID_INPUT);
+        }
     }
 }
