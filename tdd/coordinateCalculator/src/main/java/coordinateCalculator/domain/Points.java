@@ -2,6 +2,7 @@ package coordinateCalculator.domain;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -65,26 +66,26 @@ public class Points {
         return a != b;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Points other = (Points)o;
-        return this.points.containsAll(other.points);
-    }
-
-    @Override
-    public int hashCode() {
-        return points.stream().map(Point::hashCode).reduce(Integer::sum).get();
-    }
-
     public int size() {
         return points.size();
     }
 
     public boolean hasPoint(Point point) {
         return points.contains(point);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Points points1 = (Points)o;
+        return Objects.equals(points, points1.points);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(points);
     }
 }
