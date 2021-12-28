@@ -8,5 +8,6 @@ public class CoordinateCalculatorController {
     public void run() {
         Figure figure = InputView.input();
         ResultView.showPlane(figure);
+        ResultView.showArea(figure);
     }
 }

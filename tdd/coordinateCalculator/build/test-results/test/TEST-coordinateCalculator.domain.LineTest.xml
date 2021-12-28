@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coordinateCalculator.domain.LineTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-28T11:06:33" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.007">
+<testsuite name="coordinateCalculator.domain.LineTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-28T12:38:41" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.005">
   <properties/>
-  <testcase name="선 생성시 유효성 검사, 선의 점 갯수가 세 개일 경우" classname="coordinateCalculator.domain.LineTest" time="0.003"/>
+  <testcase name="선 생성시 유효성 검사, 선의 점 갯수가 세 개일 경우" classname="coordinateCalculator.domain.LineTest" time="0.002"/>
   <testcase name="선 길이 구하기" classname="coordinateCalculator.domain.LineTest" time="0.001"/>
   <testcase name="선 생성시 유효성 검사, 선의 점 갯수가 하나일 경우" classname="coordinateCalculator.domain.LineTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>

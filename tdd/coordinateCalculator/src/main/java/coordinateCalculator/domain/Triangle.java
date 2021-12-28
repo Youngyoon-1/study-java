@@ -28,4 +28,9 @@ public class Triangle extends AbstractFigure {
             throw new IllegalArgumentException(ERROR_INVALID_POINT_COUNT);
         }
     }
+
+    @Override
+    public String getInfo() {
+        return "삼각형 넓이는 " + area();
+    }
 }

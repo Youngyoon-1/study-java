@@ -68,4 +68,9 @@ public class ResultView {
     private static void emptyLine() {
         System.out.println();
     }
+
+    public static void showArea(Figure figure) {
+        emptyLine();
+        System.out.println(figure.getInfo());
+    }
 }

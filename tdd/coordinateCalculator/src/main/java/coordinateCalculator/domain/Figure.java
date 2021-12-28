@@ -6,4 +6,6 @@ public interface Figure {
     Points points();
 
     void checkValidPoints(Points points);
+
+    String getInfo();
 }

@@ -20,4 +20,9 @@ public class Line extends AbstractFigure {
             throw new IllegalArgumentException(ERROR_INVALID_POINT_COUNT);
         }
     }
+
+    @Override
+    public String getInfo() {
+        return "두 점 사이의 거리는 " + area();
+    }
 }
