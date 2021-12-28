@@ -1,10 +1,12 @@
 coordinateCalculator/domain/PointTest.java
  coordinateCalculator.domain.PointTest
+coordinateCalculator/view/InputViewTest.java
+ coordinateCalculator.view.InputViewTest
 coordinateCalculator/domain/RectangleTest.java
  coordinateCalculator.domain.RectangleTest
 coordinateCalculator/domain/LineTest.java
  coordinateCalculator.domain.LineTest
 coordinateCalculator/domain/TriangleTest.java
  coordinateCalculator.domain.TriangleTest
-coordinateCalculator/view/InputViewTest.java
- coordinateCalculator.view.InputViewTest
+coordinateCalculator/domain/FigureFactoryTest.java
+ coordinateCalculator.domain.FigureFactoryTest

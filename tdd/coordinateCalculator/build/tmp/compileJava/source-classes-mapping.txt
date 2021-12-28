@@ -8,12 +8,14 @@ coordinateCalculator/view/InputView.java
  coordinateCalculator.view.InputView
 coordinateCalculator/domain/Figure.java
  coordinateCalculator.domain.Figure
+coordinateCalculator/domain/Points.java
+ coordinateCalculator.domain.Points
+coordinateCalculator/domain/FigureFactory.java
+ coordinateCalculator.domain.FigureFactory
 coordinateCalculator/domain/AbstractFigure.java
  coordinateCalculator.domain.AbstractFigure
 coordinateCalculator/domain/Line.java
  coordinateCalculator.domain.Line
-coordinateCalculator/domain/Points.java
- coordinateCalculator.domain.Points
 coordinateCalculator/domain/Rectangle.java
  coordinateCalculator.domain.Rectangle
 coordinateCalculator/domain/Triangle.java

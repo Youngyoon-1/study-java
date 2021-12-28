@@ -80,4 +80,8 @@ public class Points {
     public int hashCode() {
         return points.stream().map(Point::hashCode).reduce(Integer::sum).get();
     }
+
+    public Integer size() {
+        return points.size();
+    }
 }
