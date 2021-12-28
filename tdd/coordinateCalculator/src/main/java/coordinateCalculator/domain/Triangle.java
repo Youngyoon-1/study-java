@@ -12,7 +12,7 @@ public class Triangle extends AbstractFigure {
     }
 
     private void checkValidTriangle(Points points) {
-        if (points.canNotMakeTriangle()) {
+        if (!points.canMakeTriangle()) {
             throw new IllegalArgumentException(ERROR_INVALID_TRIANGLE);
         }
     }

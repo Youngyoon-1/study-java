@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.function.Function;
 
 public class FigureFactory {
-    private static final Map<Integer, Function<Points, Figure>> classifier = new HashMap<>();
     public static final String ERROR_INVALID_POINTS = "[ERROR] 유효하지 않은 점입니다.";
+    private static final Map<Integer, Function<Points, Figure>> classifier = new HashMap<>();
 
     static {
         classifier.put(2, Line::new);

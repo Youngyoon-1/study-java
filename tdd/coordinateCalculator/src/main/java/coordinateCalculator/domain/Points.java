@@ -58,12 +58,11 @@ public class Points {
         return Math.sqrt(s * (s - a) * (s - b) * (s - c));
     }
 
-    public boolean canNotMakeTriangle() {
+    public boolean canMakeTriangle() {
         double a = points.get(0).calculateTilt(points.get(1));
         double b = points.get(0).calculateTilt(points.get(2));
-        double c = points.get(1).calculateTilt(points.get(2));
 
-        return a == b && a == c;
+        return a != b;
     }
 
     @Override
@@ -81,7 +80,7 @@ public class Points {
         return points.stream().map(Point::hashCode).reduce(Integer::sum).get();
     }
 
-    public Integer size() {
+    public int size() {
         return points.size();
     }
 }
