@@ -6,3 +6,5 @@ coordinateCalculator/domain/LineTest.java
  coordinateCalculator.domain.LineTest
 coordinateCalculator/domain/TriangleTest.java
  coordinateCalculator.domain.TriangleTest
+coordinateCalculator/view/InputViewTest.java
+ coordinateCalculator.view.InputViewTest
