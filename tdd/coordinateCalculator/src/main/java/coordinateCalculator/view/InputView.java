@@ -5,17 +5,20 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import coordinateCalculator.domain.Figure;
+import coordinateCalculator.domain.FigureFactory;
 import coordinateCalculator.domain.Point;
 import coordinateCalculator.domain.Points;
 
 public class InputView {
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void input() {
+    public static Figure input() {
         emptyLine();
         System.out.println("좌표를 입력하세요.");
         String input = readLine();
-        generatePoints(input);
+        Points points = generatePoints(input);
+        return FigureFactory.create(points);
     }
 
     static Points generatePoints(String input) {
