@@ -18,8 +18,13 @@ public class InputView {
     public static Figure input() {
         emptyLine();
         System.out.println("좌표를 입력하세요.");
-        Points points = generatePoints(readLine());
-        return FigureFactory.create(points);
+        try {
+            Points points = generatePoints(readLine());
+            return FigureFactory.create(points);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return input();
+        }
     }
 
     static Points generatePoints(String input) {
