@@ -9,9 +9,9 @@ public class FigureFactory {
     private static final Map<Integer, Function<Points, Figure>> classifier = new HashMap<>();
 
     static {
-        classifier.put(2, Line::new);
-        classifier.put(3, Triangle::new);
-        classifier.put(4, Rectangle::new);
+        classifier.put(Line.POINT_COUNT, Line::new);
+        classifier.put(Triangle.POINT_COUNT, Triangle::new);
+        classifier.put(Rectangle.POINT_COUNT, Rectangle::new);
     }
 
     public static Figure create(Points points) {

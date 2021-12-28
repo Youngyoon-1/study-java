@@ -11,4 +11,9 @@ public abstract class AbstractFigure implements Figure {
     public Points points() {
         return points;
     }
+
+    @Override
+    public boolean hasPoint(Point point) {
+        return points.hasPoint(point);
+    }
 }

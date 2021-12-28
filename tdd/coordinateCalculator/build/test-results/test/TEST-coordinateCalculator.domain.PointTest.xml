@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="coordinateCalculator.domain.PointTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-12-28T12:38:40" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.096">
+<testsuite name="coordinateCalculator.domain.PointTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-12-28T12:57:02" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.088">
   <properties/>
   <testcase name="두 점 사이 거리 구하기" classname="coordinateCalculator.domain.PointTest" time="0.004"/>
-  <testcase name="점 생성시 지정 값 범위를 벗어나지 않는 경우(1 ~ 24)" classname="coordinateCalculator.domain.PointTest" time="0.003"/>
-  <testcase name="[1] 0, 1" classname="coordinateCalculator.domain.PointTest" time="0.007"/>
+  <testcase name="점 생성시 지정 값 범위를 벗어나지 않는 경우(1 ~ 24)" classname="coordinateCalculator.domain.PointTest" time="0.001"/>
+  <testcase name="[1] 0, 1" classname="coordinateCalculator.domain.PointTest" time="0.005"/>
   <testcase name="[2] 0, 24" classname="coordinateCalculator.domain.PointTest" time="0.003"/>
   <testcase name="[3] 1, 25" classname="coordinateCalculator.domain.PointTest" time="0.0"/>
   <testcase name="[4] 24, 25" classname="coordinateCalculator.domain.PointTest" time="0.001"/>
-  <testcase name="[5] 0, 25" classname="coordinateCalculator.domain.PointTest" time="0.002"/>
-  <testcase name="두 점 비교하기" classname="coordinateCalculator.domain.PointTest" time="0.003"/>
+  <testcase name="[5] 0, 25" classname="coordinateCalculator.domain.PointTest" time="0.001"/>
+  <testcase name="두 점 비교하기" classname="coordinateCalculator.domain.PointTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

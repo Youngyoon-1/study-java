@@ -8,4 +8,6 @@ public interface Figure {
     void checkValidPoints(Points points);
 
     String getInfo();
+
+    boolean hasPoint(Point point);
 }

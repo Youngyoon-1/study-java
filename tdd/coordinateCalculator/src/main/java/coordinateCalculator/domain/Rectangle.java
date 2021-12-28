@@ -8,10 +8,10 @@ public class Rectangle extends AbstractFigure {
     public Rectangle(Points points) {
         super(points);
         checkValidPoints(points);
-        checkValidRectangle(points);
+        checkRectangleWith(points);
     }
 
-    private void checkValidRectangle(Points points) {
+    private void checkRectangleWith(Points points) {
         if (!points.canMakeRectangle()) {
             throw new IllegalArgumentException(ERROR_INVALID_RECTANGLE);
         }

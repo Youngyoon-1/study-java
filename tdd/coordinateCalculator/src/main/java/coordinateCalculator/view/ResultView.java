@@ -8,7 +8,7 @@ import coordinateCalculator.domain.Point;
 public class ResultView {
     public static final String Y_AXIS_STRING = "|";
     public static final String COORDINATE_STRING = ".";
-    public static final String ONE_SPACE_STRING = "    ";
+    public static final String FOUR_BLANK = "    ";
     public static final String ORIGIN_STRING = "+";
     public static final String X_AXIS_STRING = "----";
 
@@ -34,11 +34,11 @@ public class ResultView {
     }
 
     private static void printCoordinate(int x, int y, Figure figure) {
-        if (figure.points().hasPoint(Point.of(x, y))) {
+        if (figure.hasPoint(Point.of(x, y))) {
             System.out.printf("%4s", COORDINATE_STRING);
             return;
         }
-        System.out.print(ONE_SPACE_STRING);
+        System.out.print(FOUR_BLANK);
     }
 
     private static void printAxisNumber(int i) {
@@ -46,11 +46,11 @@ public class ResultView {
             System.out.printf("%4d", i);
             return;
         }
-        System.out.print(ONE_SPACE_STRING);
+        System.out.print(FOUR_BLANK);
     }
 
     private static void printXAxis() {
-        System.out.print(ONE_SPACE_STRING +  ORIGIN_STRING);
+        System.out.print(FOUR_BLANK +  ORIGIN_STRING);
         for (int x = COORDINATE_MINIMUM_NUMBER; x <= COORDINATE_MAXIMUM_NUMBER; x++) {
             System.out.print(X_AXIS_STRING);
         }
