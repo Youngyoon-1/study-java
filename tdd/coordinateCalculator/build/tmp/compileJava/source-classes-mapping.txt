@@ -8,6 +8,8 @@ coordinateCalculator/domain/AbstractFigure.java
  coordinateCalculator.domain.AbstractFigure
 coordinateCalculator/domain/FigureFactory.java
  coordinateCalculator.domain.FigureFactory
+coordinateCalculator/view/ResultView.java
+ coordinateCalculator.view.ResultView
 coordinateCalculator/domain/Line.java
  coordinateCalculator.domain.Line
 coordinateCalculator/domain/Points.java

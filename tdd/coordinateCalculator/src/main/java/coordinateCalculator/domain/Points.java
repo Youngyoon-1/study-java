@@ -83,4 +83,8 @@ public class Points {
     public int size() {
         return points.size();
     }
+
+    public boolean hasPoint(Point point) {
+        return points.contains(point);
+    }
 }
