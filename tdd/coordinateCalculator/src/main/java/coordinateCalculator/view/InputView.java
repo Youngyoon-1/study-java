@@ -38,4 +38,7 @@ public class InputView {
     private static void emptyLine() {
         System.out.println();
     }
+
+    public static void checkValidation(String s) {
+    }
 }

@@ -17,4 +17,10 @@ public class InputViewTest {
         assertThat(InputView.generatePoints("(10,10)-(14,15)"))
             .isEqualTo(new Points(Arrays.asList(Point.of(10, 10), Point.of(14, 15))));
     }
+
+    @DisplayName("유효하지 입력값에 대한 예외발생")
+    @Test
+    void invalidInput() {
+        assertThatThrownBy(() -> InputView.checkValidation("(10,10)-(14,15)")).hasMessage("[ERROR]");
+    }
 }

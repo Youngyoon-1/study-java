@@ -1,8 +1,10 @@
 package coordinateCalculator.domain;
 
+import static coordinateCalculator.domain.FigureFactory.*;
 import static org.assertj.core.api.Assertions.*;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -36,5 +38,12 @@ public class FigureFactoryTest {
             Point.of(20, 8)
         ));
         assertThat(FigureFactory.create(points) instanceof Triangle).isTrue();
+    }
+
+    @DisplayName("점 갯수가 유효하지 않을 경우 예외 발생")
+    @Test
+    void invalidPoints() {
+        Points points = new Points(Collections.singletonList(Point.of(10, 10)));
+        assertThatThrownBy(() -> FigureFactory.create(points)).hasMessage(ERROR_INVALID_POINTS);
     }
 }
