@@ -4,8 +4,8 @@ blackJack/domain/Symbol.java
  blackJack.domain.Symbol
 blackJack/domain/Dealer.java
  blackJack.domain.Dealer
-blackJack/domain/Deck.java
- blackJack.domain.Deck
+blackJack/view/ResultView.java
+ blackJack.view.ResultView
 blackJack/domain/Player.java
  blackJack.domain.Player
 blackJack/domain/Card.java
@@ -20,11 +20,11 @@ blackJack/domain/CardNumber.java
  blackJack.domain.CardNumber
 blackJack/domain/Participant.java
  blackJack.domain.Participant
-blackJack/view/ResultView.java
- blackJack.view.ResultView
+blackJack/domain/Deck.java
+ blackJack.domain.Deck
+blackJack/domain/Participants.java
+ blackJack.domain.Participants
 blackJack/controller/BlackJackController.java
  blackJack.controller.BlackJackController
 blackJack/view/InputView.java
  blackJack.view.InputView
-blackJack/domain/Participants.java
- blackJack.domain.Participants

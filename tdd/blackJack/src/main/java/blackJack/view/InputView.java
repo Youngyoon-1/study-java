@@ -68,21 +68,26 @@ public class InputView {
 
     public static void pickCard(Participants participants) {
         emptyLine();
-        participants.getPlayerCanPickCard()
-                .forEach(participant -> {
-                    System.out.println(participant.toString() + "는 한장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
-                    mapRequest(participant, readLine());
-                });
+        participants.getPlayerCanPickCard().forEach(InputView::pickCard);
+    }
+
+    private static void pickCard(Participant participant) {
+        while (participant.canPickCard()) {
+            System.out.println(participant + "는 한장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
+            mapRequest(participant, readLine());
+            System.out.println(participant.showCards());
+            emptyLine();
+        }
     }
 
     private static void mapRequest(Participant participant, String request) {
         if (request.equalsIgnoreCase("y")) {
             participant.pickCard(Deck.getCard());
-            System.out.println(participant.showCards());
+            return;
         }
-        
         if (request.equalsIgnoreCase("n")) {
-            System.out.println(participant.showCards());
+            return;
         }
+        throw new IllegalArgumentException("[ERROR] y 또는 n 을 입력하세요.");
     }
 }
