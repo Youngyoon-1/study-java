@@ -14,4 +14,9 @@ public class Dealer extends AbstractParticipant {
     public String showResult() {
         return "딜러 카드: " + getCardsInfo() + " - 결과: " + getResult();
     }
+
+    @Override
+    public String toString() {
+        return "딜러";
+    }
 }

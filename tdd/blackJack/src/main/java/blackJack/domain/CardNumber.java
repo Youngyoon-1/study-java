@@ -4,29 +4,31 @@ package blackJack.domain;
 import java.util.function.IntUnaryOperator;
 
 public enum CardNumber {
-    ACE(1),
-    TWO(2),
-    THREE(3),
-    FOUR(4),
-    FIVE(5),
-    SIX(6),
-    SEVEN(7),
-    EIGHT(8),
-    NINE(9),
-    TEN(10),
-    KING(10),
-    QUEEN(10),
-    JACK(10);
+    ACE("A", 1),
+    TWO("2", 2),
+    THREE("3", 3),
+    FOUR("4", 4),
+    FIVE("5", 5),
+    SIX("6", 6),
+    SEVEN("7", 7),
+    EIGHT("8", 8),
+    NINE("9", 9),
+    TEN("10", 10),
+    KING("K", 10),
+    QUEEN("Q", 10),
+    JACK("J", 10);
 
+    private final String name;
     private final int number;
 
-    CardNumber(int number) {
+    CardNumber(String name, int number) {
+        this.name = name;
         this.number = number;
     }
 
     @Override
     public String toString() {
-        return Integer.toString(number);
+        return name;
     }
 
     public int get() {

@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 public class Cards {
     private List<Card> cards = new ArrayList<>();
 
+    public Cards(List<Card> cards) {
+        this.cards.addAll(cards);
+    }
+
     public void add(Card card) {
         cards.add(card);
     }
@@ -21,5 +25,9 @@ public class Cards {
 
     public String getOneCardInfo() {
         return cards.get(0).toString();
+    }
+
+    public boolean canPickCard() {
+        return getSum() < 21;
     }
 }

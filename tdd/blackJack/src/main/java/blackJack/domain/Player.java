@@ -16,4 +16,9 @@ public class Player extends AbstractParticipant{
     public String showResult() {
         return showCards() + " - 결과: " + getResult();
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

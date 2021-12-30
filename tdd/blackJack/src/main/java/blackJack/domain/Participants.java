@@ -2,15 +2,35 @@ package blackJack.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Participants {
-    public static final List<Participant> Participants = new ArrayList<>();
+    private final List<Participant> participants = new ArrayList<>();
 
-    static {
-        Participants.add(new Dealer());
+    public Participants(List<Participant> participants) {
+        this.participants.add(new Dealer());
+        this.participants.addAll(participants);
     }
 
-    public static void add(Participant participant) {
-        Participants.add(participant);
+    public String getPlayersName() {
+        return participants.stream()
+                .filter(participant -> participant instanceof Player)
+                .map(Participant::toString)
+                .collect(Collectors.joining(", "));
+    }
+
+    public void pickCards() {
+        participants.forEach(participant -> participant.setInitCards(Deck.getCards()));
+    }
+
+    public List<Participant> participants() {
+        return participants;
+    }
+
+    public List<Participant> getPlayerCanPickCard() {
+        return participants.stream()
+                .filter(participant -> participant instanceof Player)
+                .filter(Participant::canPickCard)
+                .collect(Collectors.toList());
     }
 }

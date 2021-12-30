@@ -29,6 +29,11 @@ public abstract class AbstractParticipant implements Participant{
         return cards.getSum();
     }
 
+    @Override
+    public boolean canPickCard() {
+        return cards.canPickCard();
+    }
+
     public Cards cards() {
         return cards;
     }
