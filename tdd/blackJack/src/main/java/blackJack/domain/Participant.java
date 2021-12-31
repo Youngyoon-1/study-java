@@ -9,4 +9,5 @@ public interface Participant {
     int getResult();
     String showResult();
     boolean canPickCard();
+    Cards cards();
 }

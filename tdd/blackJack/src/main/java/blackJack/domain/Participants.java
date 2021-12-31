@@ -33,4 +33,12 @@ public class Participants {
                 .filter(Participant::canPickCard)
                 .collect(Collectors.toList());
     }
+
+    public boolean canPickCardByDealer() {
+        return participants.get(0).canPickCard();
+    }
+
+    public void pickCardByDealer() {
+        participants.get(0).pickCard(Deck.getCard());
+    }
 }

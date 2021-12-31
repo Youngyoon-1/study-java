@@ -1,8 +1,5 @@
 package blackJack.domain;
 
-
-import java.util.function.IntUnaryOperator;
-
 public enum CardNumber {
     ACE("A", 1),
     TWO("2", 2),
@@ -33,5 +30,13 @@ public enum CardNumber {
 
     public int get() {
         return number;
+    }
+
+    public boolean isAce() {
+        return this == ACE;
+    }
+
+    public boolean isTen() {
+        return this.number == 10;
     }
 }

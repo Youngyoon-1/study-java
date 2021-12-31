@@ -13,4 +13,12 @@ public class ResultView {
     private static void emptyLine() {
         System.out.println();
     }
+
+    public static void showResult(Participants participants) {
+        emptyLine();
+        participants.participants().forEach(participant -> {
+            System.out.println(participant.showResult());
+        });
+    }
 }
+

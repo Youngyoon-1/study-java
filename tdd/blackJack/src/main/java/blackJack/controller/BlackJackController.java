@@ -9,5 +9,6 @@ public class BlackJackController {
         Participants participants = InputView.initPlayer();
         ResultView.initCards(participants);
         InputView.pickCard(participants);
+        ResultView.showResult(participants);
     }
 }

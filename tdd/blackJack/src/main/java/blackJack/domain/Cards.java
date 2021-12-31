@@ -30,4 +30,16 @@ public class Cards {
     public boolean canPickCard() {
         return getSum() < 21;
     }
+
+    public boolean isBlackJack() {
+        return hasTenCard() && hasAceCard();
+    }
+
+    private boolean hasTenCard() {
+        return cards.stream().anyMatch(Card::isTen);
+    }
+
+    public boolean hasAceCard() {
+        return cards.stream().anyMatch(Card::isAce);
+    }
 }

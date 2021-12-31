@@ -21,4 +21,12 @@ public class Card {
     public int getNumber() {
         return number.get();
     }
+
+    public boolean isAce() {
+        return number.isAce();
+    }
+
+    public boolean isTen() {
+        return number.isTen();
+    }
 }
