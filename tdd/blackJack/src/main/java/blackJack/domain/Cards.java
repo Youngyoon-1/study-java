@@ -28,11 +28,14 @@ public class Cards {
     }
 
     public boolean canPickCard() {
+        if (isBlackJack()) {
+            return false;
+        }
         return getSum() < 21;
     }
 
     public boolean isBlackJack() {
-        return hasTenCard() && hasAceCard();
+        return cards.size() == 2 && hasTenCard() && hasAceCard();
     }
 
     private boolean hasTenCard() {

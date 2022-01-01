@@ -6,27 +6,27 @@ blackJack/Application.java
  blackJack.Application
 blackJack/controller/BlackJackController.java
  blackJack.controller.BlackJackController
-blackJack/domain/Participants.java
- blackJack.domain.Participants
-blackJack/view/InputView.java
- blackJack.view.InputView
-blackJack/domain/Deck.java
- blackJack.domain.Deck
-blackJack/view/ResultView.java
- blackJack.view.ResultView
-blackJack/domain/Card.java
- blackJack.domain.Card
 blackJack/domain/CardNumber.java
  blackJack.domain.CardNumber
-blackJack/domain/Cards.java
- blackJack.domain.Cards
+blackJack/domain/Card.java
+ blackJack.domain.Card
 blackJack/domain/Dealer.java
  blackJack.domain.Dealer
 blackJack/domain/Rule.java
  blackJack.domain.Rule
+blackJack/domain/Deck.java
+ blackJack.domain.Deck
 blackJack/domain/Player.java
  blackJack.domain.Player
 blackJack/domain/AbstractParticipant.java
  blackJack.domain.AbstractParticipant
+blackJack/domain/Cards.java
+ blackJack.domain.Cards
 blackJack/domain/Participant.java
  blackJack.domain.Participant
+blackJack/view/ResultView.java
+ blackJack.view.ResultView
+blackJack/view/InputView.java
+ blackJack.view.InputView
+blackJack/domain/Participants.java
+ blackJack.domain.Participants

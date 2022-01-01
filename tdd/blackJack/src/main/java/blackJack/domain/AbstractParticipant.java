@@ -30,24 +30,26 @@ public abstract class AbstractParticipant implements Participant{
 
     @Override
     public int getResult() {
-        if (rule.isBlackJack()) {
-            return rule.number();
+        int minimumResult = cards.getSum();
+        if (cards.isBlackJack()) {
+            return Rule.BLACKJACK.number();
         }
         if (cards.hasAceCard()) {
-            return calculateResult();
+            return calculateResult(minimumResult);
         }
-        return cards.getSum();
+        return minimumResult;
     }
 
-    public int calculateResult() {
-        return 0;
+    private int calculateResult(int minimumResult) {
+        int maximumResult = minimumResult + 10;
+        if (maximumResult > 21) {
+            return minimumResult;
+        }
+        return maximumResult;
     }
 
     @Override
     public boolean canPickCard() {
-        if (rule.isBlackJack()) {
-            return false;
-        }
         return cards.canPickCard();
     }
 
