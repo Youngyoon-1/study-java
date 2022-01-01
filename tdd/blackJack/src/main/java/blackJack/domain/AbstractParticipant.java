@@ -8,6 +8,9 @@ public abstract class AbstractParticipant implements Participant{
     @Override
     public void pickCard(Card card) {
         cards.add(card);
+        if (cards.getSum() > 21) {
+            this.rule = Rule.BUST;
+        }
     }
 
     @Override
