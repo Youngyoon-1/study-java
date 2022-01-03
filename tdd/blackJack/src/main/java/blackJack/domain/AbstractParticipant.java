@@ -23,6 +23,10 @@ public abstract class AbstractParticipant implements Participant{
 
     @Override
     public void setBettingAmount(BettingAmount amount) {
+        if (this.amount != null) {
+            this.amount.calculate(amount);
+            return;
+        }
         this.amount = amount;
     }
 
@@ -59,5 +63,41 @@ public abstract class AbstractParticipant implements Participant{
     @Override
     public Cards cards() {
         return cards;
+    }
+
+    @Override
+    public boolean isBust() {
+        return rule.isBust();
+    }
+
+    @Override
+    public BettingAmount getBettingAmount() {
+        return amount;
+    }
+
+    @Override
+    public int checkBust() {
+        if (rule.isBust()) {
+            return amount.lose();
+        }
+        return 0;
+    }
+
+    @Override
+    public int checkBlackJack() {
+        if (rule.isBlackJack()) {
+            return amount.blackJack();
+        }
+        return 0;
+    }
+
+    @Override
+    public boolean isBlackJack() {
+        return rule.isBlackJack();
+    }
+
+    @Override
+    public String getProfits() {
+        return this + ": " + amount.amount();
     }
 }

@@ -2,6 +2,8 @@ package blackJack.view;
 
 import blackJack.domain.Participants;
 
+import java.util.List;
+
 public class ResultView {
     public static void initCards(Participants participants) {
         emptyLine();
@@ -19,6 +21,13 @@ public class ResultView {
         participants.participants().forEach(participant -> {
             System.out.println(participant.showResult());
         });
+    }
+
+    public static void showProfits(Participants participants) {
+        emptyLine();
+        System.out.println("## 최종 수익");
+        List<String> profits = participants.getProfits();
+        profits.forEach(System.out::println);
     }
 }
 

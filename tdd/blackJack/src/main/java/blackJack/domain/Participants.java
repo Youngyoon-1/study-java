@@ -41,4 +41,12 @@ public class Participants {
     public void pickCardByDealer() {
         participants.get(0).pickCard(Deck.getCard());
     }
+
+    public List<String> getProfits() {
+        Participant dealer = participants.get(0);
+        participants.stream()
+                .filter(participant -> participant instanceof Player)
+                .forEach(participant -> participant.calculateProfits(dealer));
+        return participants.stream().map(Participant::getProfits).collect(Collectors.toList());
+    }
 }

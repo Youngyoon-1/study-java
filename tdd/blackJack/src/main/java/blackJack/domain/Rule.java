@@ -18,4 +18,8 @@ public enum Rule {
     public int number() {
         return number;
     }
+
+    public boolean isBust() {
+        return this == BUST;
+    }
 }

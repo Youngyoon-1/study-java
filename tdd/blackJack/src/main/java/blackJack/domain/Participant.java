@@ -10,4 +10,11 @@ public interface Participant {
     String showResult();
     boolean canPickCard();
     Cards cards();
+    boolean isBust();
+    BettingAmount getBettingAmount();
+    int checkBust();
+    int checkBlackJack();
+    boolean isBlackJack();
+    String getProfits();
+    default void calculateProfits(Participant dealer){};
 }
