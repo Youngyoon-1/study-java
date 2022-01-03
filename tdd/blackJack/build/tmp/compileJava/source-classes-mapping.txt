@@ -4,6 +4,8 @@ blackJack/domain/Player.java
  blackJack.domain.Player
 blackJack/veiw/InputView.java
  blackJack.veiw.InputView
+blackJack/domain/Players.java
+ blackJack.domain.Players
 blackJack/Application.java
  blackJack.Application
 blackJack/domain/BettingAmount.java

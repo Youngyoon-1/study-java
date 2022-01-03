@@ -3,6 +3,7 @@ package blackJack.veiw;
 import blackJack.domain.BettingAmount;
 import blackJack.domain.Player;
 import blackJack.domain.PlayerName;
+import blackJack.domain.Players;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -22,12 +23,22 @@ public class InputView {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void initPlayer() {
-        inputBettingAmount(createPlayer());
+    public static Players initPlayer() {
+        List<Player> players = inputBettingAmount(createPlayer());
+        return new Players(players);
     }
 
-    private static void inputBettingAmount(List<Player> players) {
-        players.forEach(InputView::setBettingAmount);
+    private static List<Player> inputBettingAmount(List<Player> players) {
+        players.forEach(player -> {
+            emptyLine();
+            setBettingAmount(player);
+        });
+
+        return players;
+    }
+
+    private static void emptyLine() {
+        System.out.println();
     }
 
     private static void setBettingAmount(Player player) {
@@ -89,7 +100,7 @@ public class InputView {
     }
 
     public static void checkAmount(String s) {
-        if (!s.chars().allMatch(Character::isDigit) || "".equals(s)) {
+        if (!s.chars().allMatch(Character::isDigit) || EMPTY.equals(s)) {
             throw new IllegalArgumentException(ERROR_INVALID_AMOUNT);
         }
     }
