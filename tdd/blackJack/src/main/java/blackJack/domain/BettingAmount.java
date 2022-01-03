@@ -26,4 +26,8 @@ public class BettingAmount {
     public int win() {
         return amount;
     }
+
+    public int initZero() {
+        return amount *= 0;
+    }
 }

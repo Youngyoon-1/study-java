@@ -53,8 +53,11 @@ public class InputView {
     }
 
     private static void checkAmount(String amount) {
-        if (!amount.chars().allMatch(Character::isDigit)) {
+        if (!amount.chars().allMatch(Character::isDigit) || "".equals(amount)) {
             throw new IllegalArgumentException("[ERROR] 숫자를 입력해주세요.");
+        }
+        if (Integer.parseInt(amount) % 10 != 0 || Integer.parseInt(amount) == 0) {
+            throw new IllegalArgumentException("[ERROR] 배팅금액은 10원 단위로 입력해주세요.");
         }
     }
 

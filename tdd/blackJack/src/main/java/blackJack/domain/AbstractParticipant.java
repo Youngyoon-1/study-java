@@ -39,7 +39,7 @@ public abstract class AbstractParticipant implements Participant{
     public int getResult() {
         int minimumResult = cards.getSum();
         if (cards.isBlackJack()) {
-            return Rule.BLACKJACK.number();
+            return 21;
         }
         if (cards.hasAceCard()) {
             return calculateResult(minimumResult);
@@ -73,22 +73,6 @@ public abstract class AbstractParticipant implements Participant{
     @Override
     public BettingAmount getBettingAmount() {
         return amount;
-    }
-
-    @Override
-    public int checkBust() {
-        if (rule.isBust()) {
-            return amount.lose();
-        }
-        return 0;
-    }
-
-    @Override
-    public int checkBlackJack() {
-        if (rule.isBlackJack()) {
-            return amount.blackJack();
-        }
-        return 0;
     }
 
     @Override

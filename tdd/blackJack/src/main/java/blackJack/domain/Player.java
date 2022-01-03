@@ -24,37 +24,46 @@ public class Player extends AbstractParticipant{
 
     @Override
     public void calculateProfits(Participant dealer) {
-        BettingAmount amount = this.getBettingAmount();
-        checkBust(amount, dealer);
-        checkBlackJack(amount, dealer);
-        if (canCalculate(dealer)) {
-            calculateProfits(amount, dealer);
+        if (hasBust(dealer)) {
+            checkBust(getBettingAmount(), dealer);
+            return;
         }
+        if (hasBlackJack(dealer)) {
+            checkBlackJack(getBettingAmount(), dealer);
+            return;
+        }
+        calculateProfits(getBettingAmount(), dealer);
     }
 
-    private boolean canCalculate(Participant dealer) {
-        return !this.isBust() && !this.isBlackJack() && !dealer.isBust() && !dealer.isBlackJack();
+    private boolean hasBlackJack(Participant dealer) {
+        return this.isBlackJack() || dealer.isBlackJack();
+    }
+
+    private boolean hasBust(Participant dealer) {
+        return this.isBust() || dealer.isBust();
     }
 
     private void calculateProfits(BettingAmount amount, Participant dealer) {
         if (this.getResult() > dealer.getResult()) {
-            int dealerProfits = amount.win() * -1;
-            dealer.setBettingAmount(new BettingAmount(dealerProfits));
+            dealer.setBettingAmount(new BettingAmount(amount.win() * -1));
         }
         if (this.getResult() < dealer.getResult()) {
-            int dealerProfits = amount.lose() * -1;
-            dealer.setBettingAmount(new BettingAmount(dealerProfits));
+            dealer.setBettingAmount(new BettingAmount(amount.lose() * -1));
+        }
+        if (this.getResult() == dealer.getResult()) {
+            dealer.setBettingAmount(new BettingAmount(amount.initZero()));
         }
     }
 
     private void checkBlackJack(BettingAmount amount, Participant dealer) {
         if (!dealer.isBlackJack() && this.isBlackJack()) {
-            int dealerProfits = amount.blackJack() * -1;
-            dealer.setBettingAmount(new BettingAmount(dealerProfits));
+            dealer.setBettingAmount(new BettingAmount(amount.blackJack() * -1));
         }
         if (dealer.isBlackJack() && !this.isBlackJack()) {
-            int dealerProfits = amount.lose() * -1;
-            dealer.setBettingAmount(new BettingAmount(dealerProfits));
+            dealer.setBettingAmount(new BettingAmount(amount.lose() * -1));
+        }
+        if (dealer.isBlackJack() && this.isBlackJack()) {
+            dealer.setBettingAmount(new BettingAmount(amount.initZero()));
         }
     }
 

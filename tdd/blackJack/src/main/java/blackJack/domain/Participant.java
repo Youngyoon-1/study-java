@@ -12,8 +12,6 @@ public interface Participant {
     Cards cards();
     boolean isBust();
     BettingAmount getBettingAmount();
-    int checkBust();
-    int checkBlackJack();
     boolean isBlackJack();
     String getProfits();
     default void calculateProfits(Participant dealer){};

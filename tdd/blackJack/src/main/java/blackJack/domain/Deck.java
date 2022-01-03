@@ -10,11 +10,11 @@ public class Deck {
 
     static {
         for (Symbol symbol : Symbol.values()) {
-            createCard(symbol);
+            createCards(symbol);
         }
     }
 
-    private static void createCard(Symbol symbol) {
+    private static void createCards(Symbol symbol) {
         for (CardNumber number : CardNumber.values()) {
             deck.add(Card.of(symbol, number));
         }

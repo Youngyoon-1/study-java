@@ -18,9 +18,8 @@ public class ResultView {
 
     public static void showResult(Participants participants) {
         emptyLine();
-        participants.participants().forEach(participant -> {
-            System.out.println(participant.showResult());
-        });
+        participants.participants()
+                .forEach(participant -> System.out.println(participant.showResult()));
     }
 
     public static void showProfits(Participants participants) {
