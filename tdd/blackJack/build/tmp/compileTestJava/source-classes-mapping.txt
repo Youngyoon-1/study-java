@@ -1,4 +1,4 @@
-blackJack/veiw/InputViewTest.java
- blackJack.veiw.InputViewTest
 blackJack.domain/PlayerTest.java
  blackJack.domain.PlayerTest
+blackJack/veiw/InputViewTest.java
+ blackJack.veiw.InputViewTest

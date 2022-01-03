@@ -1,8 +1,8 @@
-blackJack/domain/BettingAmount.java
- blackJack.domain.BettingAmount
 blackJack/domain/PlayerName.java
  blackJack.domain.PlayerName
 blackJack/domain/Player.java
  blackJack.domain.Player
 blackJack/veiw/InputView.java
  blackJack.veiw.InputView
+blackJack/domain/BettingAmount.java
+ blackJack.domain.BettingAmount

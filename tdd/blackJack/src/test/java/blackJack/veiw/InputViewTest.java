@@ -10,8 +10,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.Arrays;
 import java.util.List;
 
-import static blackJack.veiw.InputView.ERROR_DUPLICATE;
-import static blackJack.veiw.InputView.ERROR_FORMAT;
+import static blackJack.veiw.InputView.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
@@ -21,7 +20,8 @@ public class InputViewTest {
     @Test
     void createPlayer() {
         List<Player> actual = InputView.createPlayer(("jadal,jayho"));
-        List<Player> expected = Arrays.asList(new Player(new PlayerName("jadal")), new Player(new PlayerName("jayho")));
+        List<Player> expected =
+            Arrays.asList(new Player(new PlayerName("jadal")), new Player(new PlayerName("jayho")));
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -45,4 +45,10 @@ public class InputViewTest {
         assertDoesNotThrow(() -> InputView.checkFormat("jadal,jayho"));
     }
 
+    @DisplayName("베팅금액 입력값이 숫자가 아닌 경우 예외 발생")
+    @ParameterizedTest
+    @ValueSource(strings = {"100o", "1000,", "1000l", ""})
+    void validAmount(String s) {
+        assertThatThrownBy(() -> InputView.checkAmount(s)).hasMessage(ERROR_INVALID_AMOUNT);
+    }
 }

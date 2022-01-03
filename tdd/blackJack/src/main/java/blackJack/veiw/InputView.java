@@ -14,6 +14,7 @@ public class InputView {
     public static final String ERROR_DUPLICATE = "[ERROR] 중복된 이름은 사용 할 수 없습니다.";
     public static final String ERROR_FORMAT = "[ERROR] 양식에 맞춰서 입력해주세요.";
     public static final String INPUT_DELIMITER = ",";
+    public static final String ERROR_INVALID_AMOUNT = "[ERROR] 숫자를 입력해주세요.";
 
     public static List<Player> createPlayer(String s) {
         return Arrays.stream(s.split(INPUT_DELIMITER))
@@ -37,6 +38,12 @@ public class InputView {
 
         if (!matcher.matches()) {
             throw new IllegalArgumentException(ERROR_FORMAT);
+        }
+    }
+
+    public static void checkAmount(String s) {
+        if (!s.chars().allMatch(Character::isDigit) || "".equals(s)) {
+            throw new IllegalArgumentException(ERROR_INVALID_AMOUNT);
         }
     }
 }
