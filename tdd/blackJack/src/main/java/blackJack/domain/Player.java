@@ -26,4 +26,9 @@ public class Player {
     public void setBettingAmount(BettingAmount bettingAmount) {
         this.bettingAmount = bettingAmount;
     }
+
+    @Override
+    public String toString() {
+        return name.toString();
+    }
 }
