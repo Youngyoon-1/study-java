@@ -12,13 +12,4 @@ public class PlayerTest {
         Player player = new Player(new PlayerName("an"));
         assertThat(player.toString()).isEqualTo("an");
     }
-
-//    @DisplayName("배팅금액 설정")
-//    @Test
-//    void createBettingAmount() {
-//        Player an = new Player(new PlayerName("an"));
-//        an.setBettingAmount(new BettingAmount(1000));
-//
-//        assertThat(an.)
-//    }
 }

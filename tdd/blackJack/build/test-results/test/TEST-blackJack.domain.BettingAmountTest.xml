@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="blackJack.domain.BettingAmountTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-01-03T18:37:15" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.085">
+  <properties/>
+  <testcase name="[1] 0" classname="blackJack.domain.BettingAmountTest" time="0.068"/>
+  <testcase name="[2] 1" classname="blackJack.domain.BettingAmountTest" time="0.004"/>
+  <testcase name="[3] 9" classname="blackJack.domain.BettingAmountTest" time="0.003"/>
+  <testcase name="[4] 10001" classname="blackJack.domain.BettingAmountTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
