@@ -3,9 +3,10 @@ package blackJack.domain;
 import java.util.Objects;
 
 public class Player {
-    private final String name;
+    private final PlayerName name;
+    private BettingAmount bettingAmount;
 
-    public Player(String name) {
+    public Player(PlayerName name) {
         this.name = name;
     }
 
@@ -20,5 +21,9 @@ public class Player {
     @Override
     public int hashCode() {
         return Objects.hash(name);
+    }
+
+    public void setBettingAmount(BettingAmount bettingAmount) {
+        this.bettingAmount = bettingAmount;
     }
 }

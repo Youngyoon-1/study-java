@@ -1,6 +1,7 @@
 package blackJack.veiw;
 
 import blackJack.domain.Player;
+import blackJack.domain.PlayerName;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -15,7 +16,10 @@ public class InputView {
     public static final String INPUT_DELIMITER = ",";
 
     public static List<Player> createPlayer(String s) {
-        return Arrays.stream(s.split(INPUT_DELIMITER)).map(Player::new).collect(Collectors.toList());
+        return Arrays.stream(s.split(INPUT_DELIMITER))
+                .map(PlayerName::new)
+                .map(Player::new)
+                .collect(Collectors.toList());
     }
 
     public static void checkDuplication(String s) {

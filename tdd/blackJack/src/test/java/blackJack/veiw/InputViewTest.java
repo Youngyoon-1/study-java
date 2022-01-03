@@ -1,6 +1,7 @@
 package blackJack.veiw;
 
 import blackJack.domain.Player;
+import blackJack.domain.PlayerName;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -19,8 +20,8 @@ public class InputViewTest {
     @DisplayName("입력값으로 플레이어 생성")
     @Test
     void createPlayer() {
-        List<Player> actual = InputView.createPlayer("jadal,jayho");
-        List<Player> expected = Arrays.asList(new Player("jadal"), new Player("jayho"));
+        List<Player> actual = InputView.createPlayer(("jadal,jayho"));
+        List<Player> expected = Arrays.asList(new Player(new PlayerName("jadal")), new Player(new PlayerName("jayho")));
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -31,16 +32,17 @@ public class InputViewTest {
         assertDoesNotThrow(() -> InputView.checkDuplication("jadal,jayho"));
     }
 
-    @DisplayName("유효하지 않은 양식")
+    @DisplayName("이름 입력값이 유효하지 않은 양식일 경우 예외발생")
     @ParameterizedTest
     @ValueSource(strings = {"jadal", "jadal:jayho", "jadal.jayho", "jadal;jayho"})
     void invalidFormat(String s) {
         assertThatThrownBy(() -> InputView.checkFormat(s)).hasMessage(ERROR_FORMAT);
     }
 
-    @DisplayName("유효한 양식")
+    @DisplayName("이름 입력값의 유효한 양식일 경우")
     @Test
     void validFormat() {
         assertDoesNotThrow(() -> InputView.checkFormat("jadal,jayho"));
     }
+
 }
