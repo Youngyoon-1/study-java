@@ -2,6 +2,7 @@ package blackJack.domain;
 
 import static org.assertj.core.api.Assertions.*;
 
+import java.util.Arrays;
 import java.util.Collections;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -22,11 +23,12 @@ public class DealerTest {
         assertThat(dealer.toString()).isEqualTo("딜러");
     }
 
-    // @DisplayName("딜러 보유 카드 문자열로 반환")
-    // @Test
-    // void showCard() {
-    //     Card card = Card.of(Suit.CLUBS, Denomination.ACE);
-    //     player.initCards(new Cards(Collections.singletonList(card)));
-    //     assertThat(player.showCard()).isEqualTo(Collections.singletonList(card.toString()));
-    // }
+    @DisplayName("딜러 보유 카드 문자열 리스트로 반환")
+    @Test
+    void showCard() {
+        Card firstCard = Card.of(Suit.CLUBS, Denomination.ACE);
+        Card secondCard = Card.of(Suit.CLUBS, Denomination.TWO);
+        dealer.initCards(new Cards(Arrays.asList(firstCard, secondCard)));
+        assertThat(dealer.showCard()).isEqualTo(Collections.singletonList(firstCard.toString()));
+    }
 }

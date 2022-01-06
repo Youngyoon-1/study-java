@@ -18,15 +18,15 @@ blackJack/domain/RandomPickStrategy.java
  blackJack.domain.RandomPickStrategy
 blackJack/domain/Suit.java
  blackJack.domain.Suit
-blackJack/domain/Participant.java
- blackJack.domain.Participant
-blackJack/domain/Player.java
- blackJack.domain.Player
-blackJack/domain/AbstractParticipant.java
- blackJack.domain.AbstractParticipant
 blackJack/domain/Cards.java
  blackJack.domain.Cards
 blackJack/domain/Deck.java
  blackJack.domain.Deck
 blackJack/domain/Dealer.java
  blackJack.domain.Dealer
+blackJack/domain/Player.java
+ blackJack.domain.Player
+blackJack/domain/AbstractParticipant.java
+ blackJack.domain.AbstractParticipant
+blackJack/domain/Participant.java
+ blackJack.domain.Participant

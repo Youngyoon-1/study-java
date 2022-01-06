@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.Collections;
+import java.util.Arrays;
 
 public class PlayerTest {
     private Player player;
@@ -22,11 +22,12 @@ public class PlayerTest {
         assertThat(player.toString()).isEqualTo("an");
     }
 
-    @DisplayName("플레이어 보유 카드 문자열로 반환")
+    @DisplayName("플레이어 보유 카드 문자열 리스트로 반환")
     @Test
     void showCard() {
-        Card card = Card.of(Suit.CLUBS, Denomination.ACE);
-        player.initCards(new Cards(Collections.singletonList(card)));
-        assertThat(player.showCard()).isEqualTo(Collections.singletonList(card.toString()));
+        Card firstCard = Card.of(Suit.CLUBS, Denomination.ACE);
+        Card secondCard = Card.of(Suit.CLUBS, Denomination.TWO);
+        player.initCards(new Cards(Arrays.asList(firstCard, secondCard)));
+        assertThat(player.showCard()).isEqualTo(Arrays.asList(firstCard.toString(), secondCard.toString()));
     }
 }
