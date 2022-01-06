@@ -1,6 +1,10 @@
-blackJack.domain/BettingAmountTest.java
- blackJack.domain.BettingAmountTest
-blackJack.domain/PlayerTest.java
- blackJack.domain.PlayerTest
 blackJack/veiw/InputViewTest.java
  blackJack.veiw.InputViewTest
+blackJack/domain/BettingAmountTest.java
+ blackJack.domain.BettingAmountTest
+blackJack/domain/PlayerTest.java
+ blackJack.domain.PlayerTest
+blackJack/domain/CardTest.java
+ blackJack.domain.CardTest
+blackJack/domain/DeckTest.java
+ blackJack.domain.DeckTest

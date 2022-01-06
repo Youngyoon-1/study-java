@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import blackJack.domain.Player;
+import blackJack.domain.PlayerName;
+
 public class PlayerTest {
     @DisplayName("이름 반환")
     @Test
