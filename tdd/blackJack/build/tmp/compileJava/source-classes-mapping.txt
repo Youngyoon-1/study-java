@@ -28,3 +28,5 @@ blackJack/domain/Cards.java
  blackJack.domain.Cards
 blackJack/domain/Deck.java
  blackJack.domain.Deck
+blackJack/domain/Dealer.java
+ blackJack.domain.Dealer

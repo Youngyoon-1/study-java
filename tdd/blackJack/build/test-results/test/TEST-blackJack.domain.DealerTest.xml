@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="blackJack.domain.DealerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-06T08:18:10" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.101">
+  <properties/>
+  <testcase name="이름 반환" classname="blackJack.domain.DealerTest" time="0.101"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
