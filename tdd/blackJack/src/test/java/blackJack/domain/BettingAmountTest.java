@@ -7,8 +7,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import blackJack.domain.BettingAmount;
-
 public class BettingAmountTest {
     @DisplayName("배팅금액이 10의 배수가 아닐 경우 예외발생")
     @ParameterizedTest

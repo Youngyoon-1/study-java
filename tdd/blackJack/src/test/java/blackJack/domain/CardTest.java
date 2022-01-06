@@ -6,10 +6,6 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import blackJack.domain.Card;
-import blackJack.domain.Denomination;
-import blackJack.domain.Suit;
-
 public class CardTest {
     @DisplayName("같은 카드 비교")
     @Test
