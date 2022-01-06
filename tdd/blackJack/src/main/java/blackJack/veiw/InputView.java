@@ -20,8 +20,11 @@ public class InputView {
     public static final String ERROR_FORMAT = "[ERROR] 양식에 맞춰서 입력해주세요.";
     public static final String INPUT_DELIMITER = ",";
     public static final String ERROR_INVALID_AMOUNT = "[ERROR] 숫자를 입력해주세요.";
+    public static final String ERROR_NOT_YES_OR_NO = "[ERROR] 'y' 또는 'n'을 입력해주세요.";
     public static final String SPACE = " ";
     public static final String EMPTY = "";
+    public static final String YES = "y";
+    public static final String NO = "n";
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -109,5 +112,11 @@ public class InputView {
 
     public static void pickCard(Participants participants) {
 
+    }
+
+    public static void checkYesOrNo(String s) {
+        if (!s.equalsIgnoreCase(YES) && !s.equalsIgnoreCase(NO)) {
+            throw new IllegalArgumentException(ERROR_NOT_YES_OR_NO);
+        }
     }
 }

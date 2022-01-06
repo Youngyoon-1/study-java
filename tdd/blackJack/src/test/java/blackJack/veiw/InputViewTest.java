@@ -52,4 +52,18 @@ public class InputViewTest {
     void validAmount(String s) {
         assertThatThrownBy(() -> InputView.checkAmount(s)).hasMessage(ERROR_INVALID_AMOUNT);
     }
+
+    @DisplayName("카드 한 장 뽑을때 입력값이 유효하지 않은 경우")
+    @ParameterizedTest
+    @ValueSource(strings = {"nn", "yn,", "yy", ""})
+    void invalidRequest(String s) {
+        assertThatThrownBy(() -> InputView.checkYesOrNo(s)).hasMessage(ERROR_NOT_YES_OR_NO);
+    }
+
+    @DisplayName("카드 한 장 뽑을때 입력값이 유효한 경우")
+    @ParameterizedTest
+    @ValueSource(strings = {"n", "N", "y", "Y"})
+    void validRequest(String s) {
+        assertDoesNotThrow(()-> InputView.checkYesOrNo(s));
+    }
 }
