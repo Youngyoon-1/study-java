@@ -1,8 +1,9 @@
 package blackJack.domain;
 
+import java.util.List;
 import java.util.Objects;
 
-public class Player {
+public class Player extends AbstractParticipant{
     private final PlayerName name;
     private BettingAmount bettingAmount;
 
@@ -30,5 +31,10 @@ public class Player {
     @Override
     public String toString() {
         return name.toString();
+    }
+
+    @Override
+    public List<String> showCard() {
+        return cards.showCard();
     }
 }

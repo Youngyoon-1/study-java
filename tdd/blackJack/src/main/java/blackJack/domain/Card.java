@@ -29,5 +29,10 @@ public class Card {
     public int hashCode() {
         return Objects.hash(denomination, suit);
     }
+
+    @Override
+    public String toString() {
+        return denomination.toString() + suit;
+    }
 }
 
