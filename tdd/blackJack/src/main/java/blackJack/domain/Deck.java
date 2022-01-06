@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class Deck {
+    static final String ERROR_INVALID_COUNT = "[ERROR] 유효하지 않은 갯수 입니다.";
     private final Stack<Card> cards;
 
     public Deck(PickStrategy pickStrategy) {
@@ -22,11 +23,18 @@ public class Deck {
         Arrays.stream(Denomination.values()).forEach(denomination -> cards.push(new Card(suit, denomination)));
     }
 
-    public List<Card> getCard(int count) {
+    public Cards getCard(int count) {
+        checkCount(count);
         List<Card> cards = new ArrayList<>();
         for (int i = 0; i < count; i++) {
             cards.add(this.cards.pop());
         }
-        return cards;
+        return new Cards(cards);
+    }
+
+    private void checkCount(int count) {
+        if (count == 0 || count > this.cards.size()) {
+            throw new IllegalArgumentException(ERROR_INVALID_COUNT);
+        }
     }
 }

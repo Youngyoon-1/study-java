@@ -1,5 +1,6 @@
 package blackJack.domain;
 
+import static blackJack.domain.Deck.*;
 import static org.assertj.core.api.Assertions.*;
 
 import java.util.Arrays;
@@ -11,6 +12,8 @@ import java.util.Stack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class DeckTest {
     private Deck deck;
@@ -33,7 +36,8 @@ public class DeckTest {
     void pickCard() {
         Stack<Card> cards = deck.createCards();
         while (!cards.isEmpty()) {
-            assertThat(Collections.singletonList(cards.pop())).isEqualTo(deck.getCard(1));
+            Cards actual = new Cards(Collections.singletonList(cards.pop()));
+            assertThat(actual).isEqualTo(deck.getCard(1));
         }
     }
 
@@ -44,6 +48,13 @@ public class DeckTest {
         Card secondCard = new Card(Suit.CLUBS, Denomination.QUEEN);
 
         List<Card> expected = Arrays.asList(firstCard, secondCard);
-        assertThat(deck.getCard(2)).isEqualTo(expected);
+        assertThat(deck.getCard(2)).isEqualTo(new Cards(expected));
+    }
+
+    @DisplayName("뽑을 카드 갯수가 유효하지 않을 경우 예외 발생")
+    @ParameterizedTest
+    @ValueSource(ints = {0, 53})
+    void invalidCount(int count) {
+        assertThatThrownBy(() -> deck.getCard(count)).hasMessage(ERROR_INVALID_COUNT);
     }
 }
