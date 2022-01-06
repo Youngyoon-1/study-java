@@ -5,6 +5,7 @@ import blackJack.domain.Participant;
 import blackJack.domain.Participants;
 import blackJack.domain.Player;
 import blackJack.domain.PlayerName;
+import blackJack.domain.Players;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -26,9 +27,7 @@ public class InputView {
 
     public static Participants initPlayer() {
         List<Player> players = inputBettingAmount(createPlayer());
-        List<Participant> participants =
-            players.stream().map(player -> (Participant) player).collect(Collectors.toList());
-        return new Participants(participants);
+        return new Participants(new Players(players));
     }
 
     private static List<Player> inputBettingAmount(List<Player> players) {

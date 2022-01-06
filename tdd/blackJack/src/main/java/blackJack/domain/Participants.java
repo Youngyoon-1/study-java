@@ -1,13 +1,11 @@
 package blackJack.domain;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Participants {
-    private final List<Participant> participants = new ArrayList<>();
+    private final Players players;
+    private final Dealer dealer;
 
-    public Participants(List<Participant> participants) {
-        this.participants.add(new Dealer());
-        this.participants.addAll(participants);
+    public Participants(Players players) {
+        dealer = new Dealer();
+        this.players = players;
     }
 }
