@@ -1,5 +1,6 @@
 package blackJack.veiw;
 
+import blackJack.domain.Participant;
 import blackJack.domain.Player;
 import blackJack.domain.PlayerName;
 import org.junit.jupiter.api.DisplayName;
