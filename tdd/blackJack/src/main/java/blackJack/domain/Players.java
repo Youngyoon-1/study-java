@@ -10,10 +10,6 @@ public class Players {
         this.players = players;
     }
 
-    public List<Player> players() {
-        return players;
-    }
-
     public List<String> getNames() {
         return players.stream().map(Player::toString).collect(Collectors.toList());
     }

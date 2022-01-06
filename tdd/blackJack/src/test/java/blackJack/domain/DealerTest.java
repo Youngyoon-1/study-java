@@ -29,6 +29,6 @@ public class DealerTest {
         Card firstCard = Card.of(Suit.CLUBS, Denomination.ACE);
         Card secondCard = Card.of(Suit.CLUBS, Denomination.TWO);
         dealer.initCards(new Cards(Arrays.asList(firstCard, secondCard)));
-        assertThat(dealer.showCard()).isEqualTo(Collections.singletonList(firstCard.toString()));
+        assertThat(dealer.showCard()).isEqualTo("딜러: A클로버");
     }
 }

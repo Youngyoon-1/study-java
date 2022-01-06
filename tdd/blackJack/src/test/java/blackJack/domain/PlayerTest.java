@@ -28,6 +28,6 @@ public class PlayerTest {
         Card firstCard = Card.of(Suit.CLUBS, Denomination.ACE);
         Card secondCard = Card.of(Suit.CLUBS, Denomination.TWO);
         player.initCards(new Cards(Arrays.asList(firstCard, secondCard)));
-        assertThat(player.showCard()).isEqualTo(Arrays.asList(firstCard.toString(), secondCard.toString()));
+        assertThat(player.showCard()).isEqualTo("an카드: A클로버, 2클로버");
     }
 }

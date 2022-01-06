@@ -8,5 +8,6 @@ public class Application {
     public static void main(String[] args) {
         Participants participants = InputView.initPlayer();
         ResultView.initCards(participants);
+        InputView.pickCard(participants);
     }
 }

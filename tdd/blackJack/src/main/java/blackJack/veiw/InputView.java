@@ -106,4 +106,8 @@ public class InputView {
             throw new IllegalArgumentException(ERROR_INVALID_AMOUNT);
         }
     }
+
+    public static void pickCard(Participants participants) {
+
+    }
 }

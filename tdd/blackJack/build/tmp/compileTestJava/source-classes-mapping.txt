@@ -4,9 +4,11 @@ blackJack/domain/BettingAmountTest.java
  blackJack.domain.BettingAmountTest
 blackJack/domain/DeckTest.java
  blackJack.domain.DeckTest
+blackJack/veiw/InputViewTest.java
+ blackJack.veiw.InputViewTest
+blackJack/domain/ParticipantsTest.java
+ blackJack.domain.ParticipantsTest
 blackJack/domain/DealerTest.java
  blackJack.domain.DealerTest
 blackJack/domain/PlayerTest.java
  blackJack.domain.PlayerTest
-blackJack/veiw/InputViewTest.java
- blackJack.veiw.InputViewTest
