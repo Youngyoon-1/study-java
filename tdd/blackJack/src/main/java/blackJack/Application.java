@@ -7,6 +7,6 @@ import blackJack.veiw.ResultView;
 public class Application {
     public static void main(String[] args) {
         Participants participants = InputView.initPlayer();
-        ResultView.showCards(participants);
+        ResultView.initCards(participants);
     }
 }
