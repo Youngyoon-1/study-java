@@ -1,8 +1,7 @@
 package blackJack.veiw;
 
 import blackJack.domain.BettingAmount;
-import blackJack.domain.Participant;
-import blackJack.domain.Participants;
+import blackJack.domain.BlackJackGame;
 import blackJack.domain.Player;
 import blackJack.domain.PlayerName;
 import blackJack.domain.Players;
@@ -28,9 +27,9 @@ public class InputView {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static Participants initPlayer() {
+    public static Players initPlayer() {
         List<Player> players = inputBettingAmount(createPlayer());
-        return new Participants(new Players(players));
+        return new Players(players);
     }
 
     private static List<Player> inputBettingAmount(List<Player> players) {
@@ -110,8 +109,42 @@ public class InputView {
         }
     }
 
-    public static void pickCard(Participants participants) {
+    public static void pickCard(BlackJackGame blackJackGame) {
+        blackJackGame.players().forEach(player -> {
+            pickCard(blackJackGame, player);
+        });
+        emptyLine();
+        blackJackGame.dealerPickCard();
+    }
 
+    private static void pickCard(BlackJackGame blackJackGame, Player player) {
+        while (player.canPickCard()) {
+            emptyLine();
+            String request = inputYesOrNo(player);
+            pickCard(blackJackGame, player, request);
+            System.out.println(player.showCard());
+        }
+    }
+
+    private static String inputYesOrNo(Player player) {
+        System.out.println(player + "는 한장의 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
+        String request = readLine();
+        try {
+            checkYesOrNo(request);
+            return request;
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return inputYesOrNo(player);
+        }
+    }
+
+    private static void pickCard(BlackJackGame blackJackGame, Player player, String request) {
+        if (request.equalsIgnoreCase(YES)) {
+            blackJackGame.pickCard(player);
+        }
+        if (request.equalsIgnoreCase(NO)) {
+            player.stay();
+        }
     }
 
     public static void checkYesOrNo(String s) {

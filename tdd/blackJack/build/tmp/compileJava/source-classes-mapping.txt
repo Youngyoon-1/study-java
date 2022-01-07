@@ -6,6 +6,12 @@ blackJack/domain/Card.java
  blackJack.domain.Card
 blackJack/domain/Players.java
  blackJack.domain.Players
+blackJack/domain/CalculateProfit.java
+ blackJack.domain.CalculateProfit
+blackJack/domain/State.java
+ blackJack.domain.State
+blackJack/domain/BlackJackGame.java
+ blackJack.domain.BlackJackGame
 blackJack/domain/PickStrategy.java
  blackJack.domain.PickStrategy
 blackJack/domain/Denomination.java
@@ -18,6 +24,8 @@ blackJack/domain/Player.java
  blackJack.domain.Player
 blackJack/domain/RandomPickStrategy.java
  blackJack.domain.RandomPickStrategy
+blackJack/domain/BlackJackController.java
+ blackJack.domain.BlackJackController
 blackJack/veiw/InputView.java
  blackJack.veiw.InputView
 blackJack/domain/AbstractParticipant.java
@@ -26,11 +34,11 @@ blackJack/domain/Cards.java
  blackJack.domain.Cards
 blackJack/Application.java
  blackJack.Application
+blackJack/domain/Profit.java
+ blackJack.domain.Profit
 blackJack/domain/Participant.java
  blackJack.domain.Participant
 blackJack/domain/BettingAmount.java
  blackJack.domain.BettingAmount
 blackJack/domain/Suit.java
  blackJack.domain.Suit
-blackJack/domain/Participants.java
- blackJack.domain.Participants

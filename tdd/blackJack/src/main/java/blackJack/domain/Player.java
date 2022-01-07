@@ -2,7 +2,7 @@ package blackJack.domain;
 
 import java.util.Objects;
 
-public class Player extends AbstractParticipant{
+public class Player extends AbstractParticipant {
     private final PlayerName name;
     private BettingAmount bettingAmount;
 
@@ -35,5 +35,32 @@ public class Player extends AbstractParticipant{
     @Override
     public String showCard() {
         return this + "카드: " + String.join(", ", cards.showCard());
+    }
+
+    public boolean canPickCard() {
+        return state.isRunning();
+    }
+
+    public void stay() {
+        state = State.STAY;
+    }
+
+    public void calculateProfit(Dealer dealer) {
+        state.calculateProfit(this, dealer);
+    }
+
+    public void calculateProfit(double rate, Dealer dealer) {
+        profit.add(bettingAmount.calculate(rate));
+        dealer.calculateProfit(profit);
+    }
+
+    public void calculateProfitWithScore(Dealer dealer) {
+        int result = Integer.compare(cards.calculateScore(), dealer.getScore());
+        if (result > 0) {
+            calculateProfit(1, dealer);
+        }
+        if (result < 0) {
+            calculateProfit(-1, dealer);
+        }
     }
 }

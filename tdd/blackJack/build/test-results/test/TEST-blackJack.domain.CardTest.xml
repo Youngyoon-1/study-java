@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="blackJack.domain.CardTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-01-06T15:39:18" hostname="an-yeong-yun-ui-MacBookAir.local" time="0.006">
+  <properties/>
+  <testcase name="서로 다른 카드 비교" classname="blackJack.domain.CardTest" time="0.002"/>
+  <testcase name="같은 카드 비교" classname="blackJack.domain.CardTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

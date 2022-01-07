@@ -21,4 +21,24 @@ public class Players {
     public void initCards(Deck deck) {
         players.forEach(player -> player.initCards(deck.getCard(2)));
     }
+
+    public List<Player> players() {
+        return players;
+    }
+
+    public List<String> showResults() {
+        return players.stream().map(AbstractParticipant::showResult).collect(Collectors.toList());
+    }
+
+    public List<String> showPlayersProfit() {
+        return players.stream().map(AbstractParticipant::showProfit).collect(Collectors.toList());
+    }
+
+    public void calculateProfits(Dealer dealer) {
+        players.forEach(player -> player.calculateProfit(dealer));
+    }
+
+    public void finishGame() {
+        players.forEach(Player::finishGame);
+    }
 }

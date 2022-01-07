@@ -10,4 +10,25 @@ public class Dealer extends AbstractParticipant {
     public String toString() {
         return "딜러";
     }
+
+    @Override
+    public boolean canPickCard() {
+        return state.isRunning() && cards.sum() <= 16;
+    }
+
+    public boolean isBlackJack() {
+        return state.isBlackJack();
+    }
+
+    public boolean isBust() {
+        return state.isBust();
+    }
+
+    public int getScore() {
+        return cards.calculateScore();
+    }
+
+    public void calculateProfit(Profit profit) {
+        this.profit.add(profit.get() * -1);
+    }
 }

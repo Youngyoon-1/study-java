@@ -16,4 +16,8 @@ public class BettingAmount {
             throw new IllegalArgumentException(ERROR_INVALID_AMOUNT);
         }
     }
+
+    public int calculate(double rate) {
+        return (int)(bettingAmount * rate);
+    }
 }

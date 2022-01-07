@@ -1,6 +1,5 @@
 package blackJack.domain;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -10,10 +9,6 @@ public class Cards {
 
     public Cards(List<Card> cards) {
         this.cards = cards;
-    }
-
-    public Card get(int i) {
-        return cards.get(i);
     }
 
     public void add(Cards cards) {
@@ -41,5 +36,28 @@ public class Cards {
     @Override
     public int hashCode() {
         return Objects.hash(cards);
+    }
+
+    public int sum() {
+        return cards.stream().mapToInt(Card::getDenomination).sum();
+    }
+
+    public int calculateScore() {
+        if (hasAce()) {
+            return calculateScoreWithAce();
+        }
+        return sum();
+    }
+
+    private int calculateScoreWithAce() {
+        int maxScore = sum() + 10;
+        if (maxScore <= 21) {
+            return maxScore;
+        }
+        return sum();
+    }
+
+    private boolean hasAce() {
+        return cards.stream().anyMatch(Card::isAce);
     }
 }

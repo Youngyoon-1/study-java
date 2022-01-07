@@ -34,5 +34,12 @@ public class Card {
     public String toString() {
         return denomination.toString() + suit;
     }
-}
 
+    public int getDenomination() {
+        return denomination.getScore();
+    }
+
+    public boolean isAce() {
+        return denomination.isAce();
+    }
+}

@@ -27,4 +27,12 @@ public enum Denomination {
     public String toString() {
         return name;
     }
+
+    public int getScore() {
+        return score;
+    }
+
+    public boolean isAce() {
+        return this == ACE;
+    }
 }
